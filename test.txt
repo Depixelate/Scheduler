@@ -1,0 +1,15 @@
+1. Verification of Boolean Theorems using basic gates.
+2. Design and implementation of combinational circuits using basic gates for arbitrary functions, code
+converters.
+3. Design and implement half/full adder and subtractor.
+4. Design and implement combinational circuits using MSI devices:
+• 4-bit binary adder/subtractor
+• Parity generator/checker
+• Magnitude Comparator
+• Application using multiplexers
+5. Design and implement shift-registers.
+6. Design and implement synchronous counters.
+7. Design and implement asynchronous counters.
+8. Coding combinational circuits using HDL.
+9. Coding sequential circuits using HDL.
+10. Design and implementation of a simple digital system (Mini Project).
