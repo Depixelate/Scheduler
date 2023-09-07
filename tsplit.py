@@ -40,16 +40,18 @@ parser.add_argument(
     "-ut",
     "--unit-title",
     help="adds unit title prefix for portions",
-    action="store_true",
+    action = argparse.BooleanOptionalAction,
+    default=False
 )
 parser.add_argument(
     "-un",
     "--unit-number",
     help="adds unit number prefix for portions",
-    action="store_true",
+    action=argparse.BooleanOptionalAction,
+    default=True
 )
 parser.add_argument(
-    "-t", "--title", help="adds title prefix for portions", action="store_true"
+    "-st", "--subject-title", help="adds subject title prefix for portions", action=argparse.BooleanOptionalAction, default=True
 )
 # parser.add_argument("-md", "--max-denominator", help = "the maximum denominator when splitting tasks by day, default 12, set to 0 for no limit", default = 12)
 
@@ -72,11 +74,11 @@ def parse_list(args, part):
 
     prefix = ""
 
-    if args.title:
-        title_exp = r"^title:\s*(.*)\n"
-        title = re.findall(title_exp, part, flags=re.MULTILINE | re.IGNORECASE)[0]
-        prefix = add_prefix(prefix, title)
-        part = re.sub(title_exp, r"", part)
+    if args.subject_title:
+        subject_title_exp = r"^title:\s*(.*)\n"
+        subject_title = re.findall(subject_title_exp, part, flags=re.MULTILINE | re.IGNORECASE)[0]
+        prefix = add_prefix(prefix, subject_title)
+        part = re.sub(subject_title_exp, r"", part)
 
     part = part.strip()
 
@@ -178,7 +180,9 @@ def gantt_rows(args, task_list):
 def to_todoist(df: pd.DataFrame):
     df = df.rename({"NAME": "CONTENT", "START": "DATE"}, axis = 1)
     df['TYPE'] = 'task'
-    return df
+    df['DESCRIPTION'] = df['PRIORITY'] = df['INDENT'] = df['AUTHOR'] = df['RESPONSIBLE'] = df['DATE_LANG'] = df['TIMEZONE'] = ""
+    new = df[['TYPE','CONTENT','DESCRIPTION','PRIORITY','INDENT','AUTHOR','RESPONSIBLE','DATE','DATE_LANG','TIMEZONE']]
+    return new
 
 
 def td_inter_rows(args, gantt: pd.DataFrame):

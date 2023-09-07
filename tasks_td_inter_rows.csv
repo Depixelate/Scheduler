@@ -1,272 +1,272 @@
-CONTENT,DATE,TYPE
-0,Eng-I: Value Education,2023-09-07,task
-1,OOP-I: Principles of OOP: Classes,2023-09-07,task
-2,DD-I: Number Systems,2023-09-07,task
-3,Eng-I: Need,2023-09-08,task
-4,DSA-I: Algorithm Analysis: Running time calculations,2023-09-08,task
-5,Math-I: Propositional Logic,2023-09-09,task
-6,OOP-I: Objects,2023-09-09,task
-7,Math-I: Propositional equivalences,2023-09-10,task
-8,Eng-I: Basic Guidelines,2023-09-10,task
-9,DD-I: Arithmetic Operations,2023-09-10,task
-10,OOP-I: Data hiding,2023-09-11,task
-11,DSA-I: Abstract Data Types (ADTs),2023-09-11,task
-12,Eng-I: Content and Process,2023-09-12,task
-13,OOP-I: Data encapsulation,2023-09-12,task
-14,DD-I: Binary Codes,2023-09-13,task
-15,Eng-I: Self-Exploration,2023-09-13,task
-16,DSA-I: List ADT: Array implementation of lists,2023-09-14,task
-17,Math-I: Predicates and quantifiers,2023-09-14,task
-18,DSA Lab: 1. Represent polynomial expression as linked list and write functions for polynomial manipulation,2023-09-14,task
-19,OOP-I: Inheritance,2023-09-15,task
-20,DD Lab: 1. Verification of Boolean Theorems using basic gates.,2023-09-15,task
-21,Eng-I: meaning,2023-09-16,task
-22,DD-I: Boolean Algebra and Logic Gates,2023-09-16,task
-23,Math-I: Nested quantifiers,2023-09-17,task
-24,OOP Lab: 1. Build an application using classes and objects (Eg: Electricity bill generation),2023-09-17,task
-25,DSA-I: Linked lists,2023-09-17,task
-26,OOP-I: Poly- morphism,2023-09-18,task
-27,Eng-I: importance and process,2023-09-18,task
-28,DD-I: Theorems and Properties of Boolean Algebra,2023-09-19,task
-29,Eng-I: Continuous Happiness and Prosperity,2023-09-19,task
-30,DSA-I: Circular linked lists,2023-09-20,task
-31,Math-I: Rules of inference,2023-09-20,task
-32,DD-I: Boolean Functions,2023-09-21,task
-33,OOP-I: Definition of Classes: Objects,2023-09-21,task
-34,Eng-I: A look at basic Human Aspirations,2023-09-21,task
-35,OOP-I: Methods,2023-09-22,task
-36,Math-I: Introduction to proofs,2023-09-22,task
-37,Eng-I: Right understanding,2023-09-23,task
-38,DSA-I: Doubly linked lists,2023-09-23,task
-39,DD-I: Canonical and Standard Forms,2023-09-24,task
-40,"DSA Lab: 2. Implement doubly linked list ADT (e.g Insert, delete, search, merge, reverse operations)",2023-09-24,task
-41,OOP-I: Access specifiers,2023-09-24,task
-42,Eng-I: Relationship and Physical Facilities,2023-09-25,task
-43,OOP-I: Static and final classes and members,2023-09-25,task
-44,DSA-I: Applications of Lists: Polynomial manipulation. ,2023-09-26,task
-45,Math-I: Proof methods and strategy,2023-09-26,task
-46,Eng-I: The basic requirements,2023-09-27,task
-47,DD-I: Simplification of Boolean Functions using Karnaugh Map,2023-09-27,task
-48,DD-I: Logic Gates,2023-09-28,task
-49,"DD Lab: 2. Design and implementation of combinational circuits using basic gates for arbitrary functions, code
-converters.",2023-09-28,task
-50,OOP-I: Object Construction and Destruction,2023-09-28,task
-51,DSA-II: Stack ADT: Stack model,2023-09-29,task
-52,Math-I: Normal forms,2023-09-29,task
-53,Eng-I: Understanding Happiness and Prosperity,2023-09-30,task
-54,OOP-I: Fundamental programming structures in Java,2023-09-30,task
-55,OOP Lab: 2. Develop an application using Inheritance (Eg: Payroll application),2023-10-01,task
-56,Eng-I: A critical appraisal of the current scenario,2023-10-01,task
-57,DSA-II: Implementation of stacks,2023-10-01,task
-58,OOP-I: Streams: Input,2023-10-02,task
-59,Math-I: Applications to switching circuits. ,2023-10-02,task
-60,DD-I: NAND and NOR Implementations. ,2023-10-03,task
-61,Eng-I: Method to fulfil the above human aspirations,2023-10-03,task
-62,"DSA Lab: 3. Implementation of Stack ADT (e.g Balancing parenthesis, infix to postfix conversion, evaluation of
-postfix expression)",2023-10-04,task
-63,Eng-I: UNDERSTANDING and living in harmony at various levels. ,2023-10-04,task
-64,Math-II: Mathematical induction,2023-10-05,task
-65,DSA-II: Applications: Balancing symbols,2023-10-05,task
-66,DD-II: Combinational Circuits,2023-10-05,task
-67,OOP-I: Output,2023-10-06,task
-68,Eng-II: An understanding human being as a co-existence of the sentient ‘I’ and the material ‘Body’,2023-10-06,task
-69,OOP-I: String handling,2023-10-07,task
-70,DSA-II: Infix to postfix conversion,2023-10-07,task
-71,DD-II: Analysis and Design Procedures,2023-10-08,task
-72,Eng-II: Understanding the needs of Self (‘I’) and ‘Body’,2023-10-08,task
-73,Math-II: Strong induction,2023-10-08,task
-74,DD Lab: 3. Design and implement half/full adder and subtractor.,2023-10-09,task
-75,OOP-I: Examples in Java. ,2023-10-09,task
-76,DD-II: Binary Adder,2023-10-10,task
-77,Eng-II: Sukh and Suvidha,2023-10-10,task
-78,Math-II: The pigeonhole principle,2023-10-11,task
-79,DSA-II: Evaluating postfix expressions,2023-10-11,task
-80,DD-II: Subtractor,2023-10-12,task
-81,Eng-II: Understanding the Body as an instrument of ‘I’ (I being the doer,2023-10-12,task
-82,OOP-II: Inheritance: Definition,2023-10-12,task
-83,DSA Lab: 4. Implementation of Queue ADT (e.g Simulating printer jobs),2023-10-13,task
-84,OOP Lab: 3. Write a program to experiment with Polymorphism (E.g. Area of different shapes),2023-10-13,task
-85,OOP-II: Types of inheritance: Single,2023-10-14,task
-86,Eng-II: seer and enjoyer),2023-10-14,task
-87,DSA-II: Function calls,2023-10-15,task
-88,Math-II: Recurrence relations,2023-10-15,task
-89,OOP-II: Multilevel,2023-10-15,task
-90,DD-II: Decimal Adder,2023-10-16,task
-91,Eng-II: Understanding the characteristics and activities of ‘I’ and harmony in ‘I’,2023-10-16,task
-92,DSA-II: Queue ADT: Queue model,2023-10-17,task
-93,OOP-II: Multiple,2023-10-17,task
-94,Math-II: Partition of integers,2023-10-18,task
-95,Eng-II: Understanding the harmony of I with the Body: Sanyam and Swasthya,2023-10-18,task
-96,DD-II: Binary Multiplier,2023-10-19,task
-97,Math-II: Solving linear recurrence relations using generating functions,2023-10-19,task
-98,Eng-II: correct appraisal of Physical needs,2023-10-19,task
-99,OOP-II: Hierarchical,2023-10-20,task
-100,DSA-II: Array implementation of queues,2023-10-20,task
-101,"DD Lab: 4. Design and implement combinational circuits using MSI devices:
+TYPE,CONTENT,DESCRIPTION,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE
+task,Eng-I: Value Education,,,,,,2023-09-07,,
+task,OOP-I: Principles of OOP: Classes,,,,,,2023-09-07,,
+task,DD-I: Number Systems,,,,,,2023-09-07,,
+task,Eng-I: Need,,,,,,2023-09-08,,
+task,DSA-I: Algorithm Analysis: Running time calculations,,,,,,2023-09-08,,
+task,Math-I: Propositional Logic,,,,,,2023-09-09,,
+task,OOP-I: Objects,,,,,,2023-09-09,,
+task,Math-I: Propositional equivalences,,,,,,2023-09-10,,
+task,Eng-I: Basic Guidelines,,,,,,2023-09-10,,
+task,DD-I: Arithmetic Operations,,,,,,2023-09-10,,
+task,OOP-I: Data hiding,,,,,,2023-09-11,,
+task,DSA-I: Abstract Data Types (ADTs),,,,,,2023-09-11,,
+task,Eng-I: Content and Process,,,,,,2023-09-12,,
+task,OOP-I: Data encapsulation,,,,,,2023-09-12,,
+task,DD-I: Binary Codes,,,,,,2023-09-13,,
+task,Eng-I: Self-Exploration,,,,,,2023-09-13,,
+task,DSA-I: List ADT: Array implementation of lists,,,,,,2023-09-14,,
+task,Math-I: Predicates and quantifiers,,,,,,2023-09-14,,
+task,DSA Lab: 1. Represent polynomial expression as linked list and write functions for polynomial manipulation,,,,,,2023-09-14,,
+task,OOP-I: Inheritance,,,,,,2023-09-15,,
+task,DD Lab: 1. Verification of Boolean Theorems using basic gates.,,,,,,2023-09-15,,
+task,Eng-I: meaning,,,,,,2023-09-16,,
+task,DD-I: Boolean Algebra and Logic Gates,,,,,,2023-09-16,,
+task,Math-I: Nested quantifiers,,,,,,2023-09-17,,
+task,OOP Lab: 1. Build an application using classes and objects (Eg: Electricity bill generation),,,,,,2023-09-17,,
+task,DSA-I: Linked lists,,,,,,2023-09-17,,
+task,OOP-I: Poly- morphism,,,,,,2023-09-18,,
+task,Eng-I: importance and process,,,,,,2023-09-18,,
+task,DD-I: Theorems and Properties of Boolean Algebra,,,,,,2023-09-19,,
+task,Eng-I: Continuous Happiness and Prosperity,,,,,,2023-09-19,,
+task,DSA-I: Circular linked lists,,,,,,2023-09-20,,
+task,Math-I: Rules of inference,,,,,,2023-09-20,,
+task,DD-I: Boolean Functions,,,,,,2023-09-21,,
+task,OOP-I: Definition of Classes: Objects,,,,,,2023-09-21,,
+task,Eng-I: A look at basic Human Aspirations,,,,,,2023-09-21,,
+task,OOP-I: Methods,,,,,,2023-09-22,,
+task,Math-I: Introduction to proofs,,,,,,2023-09-22,,
+task,Eng-I: Right understanding,,,,,,2023-09-23,,
+task,DSA-I: Doubly linked lists,,,,,,2023-09-23,,
+task,DD-I: Canonical and Standard Forms,,,,,,2023-09-24,,
+task,"DSA Lab: 2. Implement doubly linked list ADT (e.g Insert, delete, search, merge, reverse operations)",,,,,,2023-09-24,,
+task,OOP-I: Access specifiers,,,,,,2023-09-24,,
+task,Eng-I: Relationship and Physical Facilities,,,,,,2023-09-25,,
+task,OOP-I: Static and final classes and members,,,,,,2023-09-25,,
+task,DSA-I: Applications of Lists: Polynomial manipulation. ,,,,,,2023-09-26,,
+task,Math-I: Proof methods and strategy,,,,,,2023-09-26,,
+task,Eng-I: The basic requirements,,,,,,2023-09-27,,
+task,DD-I: Simplification of Boolean Functions using Karnaugh Map,,,,,,2023-09-27,,
+task,DD-I: Logic Gates,,,,,,2023-09-28,,
+task,"DD Lab: 2. Design and implementation of combinational circuits using basic gates for arbitrary functions, code
+converters.",,,,,,2023-09-28,,
+task,OOP-I: Object Construction and Destruction,,,,,,2023-09-28,,
+task,DSA-II: Stack ADT: Stack model,,,,,,2023-09-29,,
+task,Math-I: Normal forms,,,,,,2023-09-29,,
+task,Eng-I: Understanding Happiness and Prosperity,,,,,,2023-09-30,,
+task,OOP-I: Fundamental programming structures in Java,,,,,,2023-09-30,,
+task,OOP Lab: 2. Develop an application using Inheritance (Eg: Payroll application),,,,,,2023-10-01,,
+task,Eng-I: A critical appraisal of the current scenario,,,,,,2023-10-01,,
+task,DSA-II: Implementation of stacks,,,,,,2023-10-01,,
+task,OOP-I: Streams: Input,,,,,,2023-10-02,,
+task,Math-I: Applications to switching circuits. ,,,,,,2023-10-02,,
+task,DD-I: NAND and NOR Implementations. ,,,,,,2023-10-03,,
+task,Eng-I: Method to fulfil the above human aspirations,,,,,,2023-10-03,,
+task,"DSA Lab: 3. Implementation of Stack ADT (e.g Balancing parenthesis, infix to postfix conversion, evaluation of
+postfix expression)",,,,,,2023-10-04,,
+task,Eng-I: UNDERSTANDING and living in harmony at various levels. ,,,,,,2023-10-04,,
+task,Math-II: Mathematical induction,,,,,,2023-10-05,,
+task,DSA-II: Applications: Balancing symbols,,,,,,2023-10-05,,
+task,DD-II: Combinational Circuits,,,,,,2023-10-05,,
+task,OOP-I: Output,,,,,,2023-10-06,,
+task,Eng-II: An understanding human being as a co-existence of the sentient ‘I’ and the material ‘Body’,,,,,,2023-10-06,,
+task,OOP-I: String handling,,,,,,2023-10-07,,
+task,DSA-II: Infix to postfix conversion,,,,,,2023-10-07,,
+task,DD-II: Analysis and Design Procedures,,,,,,2023-10-08,,
+task,Eng-II: Understanding the needs of Self (‘I’) and ‘Body’,,,,,,2023-10-08,,
+task,Math-II: Strong induction,,,,,,2023-10-08,,
+task,DD Lab: 3. Design and implement half/full adder and subtractor.,,,,,,2023-10-09,,
+task,OOP-I: Examples in Java. ,,,,,,2023-10-09,,
+task,DD-II: Binary Adder,,,,,,2023-10-10,,
+task,Eng-II: Sukh and Suvidha,,,,,,2023-10-10,,
+task,Math-II: The pigeonhole principle,,,,,,2023-10-11,,
+task,DSA-II: Evaluating postfix expressions,,,,,,2023-10-11,,
+task,DD-II: Subtractor,,,,,,2023-10-12,,
+task,Eng-II: Understanding the Body as an instrument of ‘I’ (I being the doer,,,,,,2023-10-12,,
+task,OOP-II: Inheritance: Definition,,,,,,2023-10-12,,
+task,DSA Lab: 4. Implementation of Queue ADT (e.g Simulating printer jobs),,,,,,2023-10-13,,
+task,OOP Lab: 3. Write a program to experiment with Polymorphism (E.g. Area of different shapes),,,,,,2023-10-13,,
+task,OOP-II: Types of inheritance: Single,,,,,,2023-10-14,,
+task,Eng-II: seer and enjoyer),,,,,,2023-10-14,,
+task,DSA-II: Function calls,,,,,,2023-10-15,,
+task,Math-II: Recurrence relations,,,,,,2023-10-15,,
+task,OOP-II: Multilevel,,,,,,2023-10-15,,
+task,DD-II: Decimal Adder,,,,,,2023-10-16,,
+task,Eng-II: Understanding the characteristics and activities of ‘I’ and harmony in ‘I’,,,,,,2023-10-16,,
+task,DSA-II: Queue ADT: Queue model,,,,,,2023-10-17,,
+task,OOP-II: Multiple,,,,,,2023-10-17,,
+task,Math-II: Partition of integers,,,,,,2023-10-18,,
+task,Eng-II: Understanding the harmony of I with the Body: Sanyam and Swasthya,,,,,,2023-10-18,,
+task,DD-II: Binary Multiplier,,,,,,2023-10-19,,
+task,Math-II: Solving linear recurrence relations using generating functions,,,,,,2023-10-19,,
+task,Eng-II: correct appraisal of Physical needs,,,,,,2023-10-19,,
+task,OOP-II: Hierarchical,,,,,,2023-10-20,,
+task,DSA-II: Array implementation of queues,,,,,,2023-10-20,,
+task,"DD Lab: 4. Design and implement combinational circuits using MSI devices:
 • 4-bit binary adder/subtractor
 • Parity generator/checker
 • Magnitude Comparator
-• Application using multiplexers",2023-10-21,task
-102,DD-II: Magnitude Comparator,2023-10-21,task
-103,Eng-II: the meaning of Prosperity in detail,2023-10-22,task
-104,OOP-II: Subclass constructors,2023-10-22,task
-105,Math-II: Inclusion and Exclusion Principle and its applications. ,2023-10-22,task
-106,Eng-II: Pro- grams to ensure Sanyam and Swasthya. ,2023-10-23,task
-107,DSA-II: Applications of queues. ,2023-10-23,task
-108,"DSA Lab: 5. Implement binary search tree and produce its pre-order, in-order, and post-order traversals",2023-10-24,task
-109,DD-II: Decoders,2023-10-24,task
-110,OOP-II: Interfaces in Java: Definition,2023-10-25,task
-111,Eng-III: Understanding harmony in the family,2023-10-25,task
-112,OOP-II: Implementation,2023-10-26,task
-113,Math-III: Graphs,2023-10-26,task
-114,DSA-III: Preliminaries,2023-10-26,task
-115,"OOP Lab: 4. Design a Java interface for ADTs. (E.g. Stack, Queue)",2023-10-27,task
-116,DD-II: Encoders,2023-10-27,task
-117,Eng-III: The basic unit of human interaction,2023-10-28,task
-118,OOP-II: Extending interfaces,2023-10-28,task
-119,DSA-III: Binary trees: Expression trees,2023-10-29,task
-120,Math-III: Graph terminology and special types of graphs,2023-10-29,task
-121,Eng-III: understanding values in a human-to-human relationship,2023-10-29,task
-122,DD-II: Multiplexers,2023-10-30,task
-123,OOP-II: Inheritance versus delegation,2023-10-30,task
-124,Eng-III: Understanding Trust,2023-10-31,task
-125,Math-III: Subgraphs,2023-10-31,task
-126,DD-II: Introduction to HDL,2023-11-01,task
-127,Eng-III: The foundational value in relationship,2023-11-01,task
-128,DSA Lab: 6. Implement AVL trees (e.g Implement dictionary),2023-11-02,task
-129,DD Lab: 5. Design and implement shift-registers.,2023-11-02,task
-130,DSA-III: Binary search tree ADT,2023-11-02,task
-131,Eng-III: Difference between intention and competence,2023-11-03,task
-132,OOP-II: Inheritance rules,2023-11-03,task
-133,OOP-II: Inner classes,2023-11-04,task
-134,DD-II: HDL Models of Combinational circuits. ,2023-11-04,task
-135,Math-III: Matrix representation of graphs and graph isomorphism,2023-11-05,task
-136,Eng-III: Understanding Respect,2023-11-05,task
-137,DSA-III: AVL trees,2023-11-05,task
-138,OOP-II: Examples in Java. ,2023-11-06,task
-139,DD-III: Sequential Circuits,2023-11-06,task
-140,Eng-III: as the right evaluation,2023-11-07,task
-141,Math-III: Connectivity,2023-11-07,task
-142,OOP Lab: 5. Programs using Exception handling. (E.g. Bank Account manipulation),2023-11-08,task
-143,OOP-III: Polymorphism: Method overloading and overriding,2023-11-08,task
-144,DSA-III: Tree traversals,2023-11-09,task
-145,Eng-III: Difference between respect and differentiation,2023-11-09,task
-146,DD-III: Storage Elements: Latches,2023-11-09,task
-147,DSA Lab: 7. Implement priority queue using binary heaps (e.g Storing employee records based upon salary),2023-11-10,task
-148,OOP-III: Dynamic method dispatch,2023-11-10,task
-149,DSA-III: B- Trees,2023-11-11,task
-150,Math-III: Eulerian and Hamilton graphs. ,2023-11-11,task
-151,Eng-III: the other salient values in a relationship,2023-11-12,task
-152,OOP-III: Exceptions: Hierarchy,2023-11-12,task
-153,DD Lab: 6. Design and implement synchronous counters.,2023-11-12,task
-154,Eng-III: Understanding the harmony in the society,2023-11-13,task
-155,DD-III: Flip,2023-11-13,task
-156,Math-IV: Algebraic systems,2023-11-14,task
-157,OOP-III: Built-in exceptions,2023-11-14,task
-158,DSA-III: Priority Queues: Binary heap. ,2023-11-15,task
-159,Eng-III: comprehensive Human Goals,2023-11-15,task
-160,DD-III: Flops,2023-11-16,task
-161,Eng-III: Visualizing a universal harmonious order in society,2023-11-16,task
-162,DSA-IV: Graph Algorithms: Definitions,2023-11-16,task
-163,OOP-III: Creating own exception,2023-11-17,task
-164,Math-IV: Semi groups and monoids,2023-11-17,task
-165,Eng-III: Undivided Society,2023-11-18,task
-166,DD-III: Analysis of Clocked Sequential Circuits,2023-11-18,task
-167,OOP-III: Packages in Java,2023-11-19,task
-168,DSA-IV: Representation of graphs,2023-11-19,task
-169,Math-IV: Groups,2023-11-19,task
-170,Eng-III: Universal Order,2023-11-20,task
-171,OOP-III: Examples in Java. ,2023-11-20,task
-172,OOP Lab: 6. Program to implement packages (Eg: Currency converter),2023-11-21,task
-173,DD-III: State Reduction and Assignment,2023-11-21,task
-174,DSA Lab: 8. Graph representation and implement graph traversal algorithms,2023-11-22,task
-175,Eng-III: From family to world family! ,2023-11-22,task
-176,Math-IV: Subgroups Homomorphisms,2023-11-23,task
-177,DSA-IV: Graph Traversals: Breadth-first traversal,2023-11-23,task
-178,OOP-IV: Definition and concepts: Generic classes and generic methods,2023-11-23,task
-179,DD-III: Design Procedure,2023-11-24,task
-180,Eng-IV: Understanding the harmony in Nature,2023-11-24,task
-181,DD Lab: 7. Design and implement asynchronous counters.,2023-11-25,task
-182,OOP-IV: Generic types,2023-11-25,task
-183,DD-III: Registers and Counters,2023-11-26,task
-184,Eng-IV: Interconnectedness,2023-11-26,task
-185,Math-IV: Normal subgroup and coset,2023-11-26,task
-186,DSA-IV: Depth-first traversal,2023-11-27,task
-187,OOP-IV: Restrictions and limitations,2023-11-27,task
-188,Eng-IV: self-regulation and mutual fulfilment among the four orders of nature,2023-11-28,task
-189,DSA-IV: Topological sort,2023-11-28,task
-190,Math-IV: Lagrange’s theorem,2023-11-29,task
-191,DD-III: HDL Models of Sequential Circuits. ,2023-11-29,task
-192,OOP-IV: Inheritance rules for generic types,2023-11-30,task
-193,Eng-IV: recyclability,2023-11-30,task
-194,Eng-IV: Understanding Existence as Coexistence of mutually interacting units in all-pervasive space,2023-11-30,task
-195,OOP-IV: Reflections,2023-12-01,task
-196,DSA Lab: 9. Implement Dijkstra’s algorithm using graph (e.g Find the shortest route to connect one city to another),2023-12-01,task
-197,DSA-IV: Shortest-Path Algorithms: Dijkstra’s algorithm,2023-12-02,task
-198,DD-IV: Analysis and Design of Asynchronous Sequential Circuits,2023-12-02,task
-199,Math-IV: Definitions and examples of Rings and Fields. ,2023-12-03,task
-200,Eng-IV: Holistic perception of harmony at all levels of existence. ,2023-12-03,task
-201,OOP-IV: Examples in Java. ,2023-12-03,task
-202,"OOP Lab: 7. Program to implement generic classes, methods (Eg: Generic stack, Sorting)",2023-12-04,task
-203,DD-IV: Reduction of State and Flow Tables,2023-12-04,task
-204,Math-V: Partial ordering,2023-12-05,task
-205,DSA-IV: All-pairs shortest path. ,2023-12-05,task
-206,Eng-V: Natural acceptance of human values,2023-12-06,task
-207,DD Lab: 8. Coding combinational circuits using HDL.,2023-12-06,task
-208,OOP-V: ALGORITHMS 9 Introduction to collections,2023-12-07,task
-209,Eng-V: Definitiveness of Ethical Human Conduct,2023-12-07,task
-210,DD-IV: Race-free State Assignment,2023-12-07,task
-211,Math-V: Posets,2023-12-08,task
-212,OOP-V: Collection Classes and Interfaces: Array list,2023-12-08,task
-213,Eng-V: Basis for Humanistic Education,2023-12-09,task
-214,DSA-V: Sorting: Insertion sort,2023-12-09,task
-215,DD-IV: Hazards. ,2023-12-10,task
-216,OOP-V: Linked list,2023-12-10,task
-217,DSA Lab: 10. Implement any two sorting algorithms,2023-12-10,task
-218,Math-V: Lattices as Posets,2023-12-11,task
-219,DSA-V: Shell sort,2023-12-11,task
-220,Eng-V: Humanistic Constitution and Humanistic Universal Order,2023-12-12,task
-221,OOP-V: Queue,2023-12-12,task
-222,DD-V: RAM,2023-12-13,task
-223,Eng-V: Competence in Professional Ethics,2023-12-13,task
-224,Math-V: Properties of lattices,2023-12-14,task
-225,OOP-V: Set,2023-12-14,task
-226,DSA-V: Radix Exchange sort,2023-12-14,task
-227,Eng-V: augmenting universal human order,2023-12-15,task
-228,DD-V: Memory Decoding,2023-12-15,task
-229,OOP-V: Trees,2023-12-16,task
-230,Eng-V: the scope and characteristics of people-friendly and eco-friendly,2023-12-16,task
-231,DSA-V: Hashing: Hash function,2023-12-17,task
-232,"OOP Lab: 8. Program to perform operations using Collection classes (Eg: ArrayList, LinkedList)",2023-12-17,task
-233,Math-V: Lattices as algebraic systems,2023-12-17,task
-234,DD-V: Error Detection and Correction,2023-12-18,task
-235,Eng-V: Holistic Technologies,2023-12-18,task
-236,DD Lab: 9. Coding sequential circuits using HDL.,2023-12-19,task
-237,OOP-V: Iterators for collections,2023-12-19,task
-238,Eng-V: production systems and management models,2023-12-20,task
-239,DSA-V: Separate chaining,2023-12-20,task
-240,Math-V: Sublattices,2023-12-21,task
-241,DSA Lab: 11. Implement hashing using separate chaining technique,2023-12-21,task
-242,OOP-V: Map class,2023-12-21,task
-243,DD-V: ROM,2023-12-22,task
-244,Eng-V: Case studies,2023-12-22,task
-245,DSA-V: Open addressing,2023-12-23,task
-246,OOP-V: Collection algorithms: Sorting,2023-12-23,task
-247,Math-V: Direct product and Homomorphism,2023-12-24,task
-248,Eng-V: Strategy for the transition from the present state to Universal Human Order,2023-12-24,task
-249,DD-V: Programmable Logic Array,2023-12-24,task
-250,OOP-V: Searching,2023-12-25,task
-251,Math-V: Boolean algebra,2023-12-25,task
-252,Eng-V: At the level of individual: as socially and ecologically responsible engineers,2023-12-26,task
-253,DSA-V: Rehashing,2023-12-26,task
-254,OOP-V: User-defined algorithms,2023-12-27,task
-255,DD-V: Programmable Array Logic,2023-12-27,task
-256,Eng-V: technologists and managers,2023-12-28,task
-257,Math-V: Stone’s representation Theorem. ,2023-12-28,task
-258,Eng-V: At the level of society: as mutually enriching institutions and organizations. ,2023-12-28,task
-259,DD Lab: 10. Design and implementation of a simple digital system (Mini Project).,2023-12-29,task
-260,DSA-V: Extendible hashing. ,2023-12-29,task
-261,OOP-V: Examples in Java. ,2023-12-30,task
-262,DD-V: Sequential Programmable Devices. ,2023-12-30,task
-263,DSA Lab: 12. Mini Project,2023-12-31,task
-264,OOP Lab: 9. Develop a mini project for any application using the constructs of Java.,2023-12-31,task
+• Application using multiplexers",,,,,,2023-10-21,,
+task,DD-II: Magnitude Comparator,,,,,,2023-10-21,,
+task,Eng-II: the meaning of Prosperity in detail,,,,,,2023-10-22,,
+task,OOP-II: Subclass constructors,,,,,,2023-10-22,,
+task,Math-II: Inclusion and Exclusion Principle and its applications. ,,,,,,2023-10-22,,
+task,Eng-II: Pro- grams to ensure Sanyam and Swasthya. ,,,,,,2023-10-23,,
+task,DSA-II: Applications of queues. ,,,,,,2023-10-23,,
+task,"DSA Lab: 5. Implement binary search tree and produce its pre-order, in-order, and post-order traversals",,,,,,2023-10-24,,
+task,DD-II: Decoders,,,,,,2023-10-24,,
+task,OOP-II: Interfaces in Java: Definition,,,,,,2023-10-25,,
+task,Eng-III: Understanding harmony in the family,,,,,,2023-10-25,,
+task,OOP-II: Implementation,,,,,,2023-10-26,,
+task,Math-III: Graphs,,,,,,2023-10-26,,
+task,DSA-III: Preliminaries,,,,,,2023-10-26,,
+task,"OOP Lab: 4. Design a Java interface for ADTs. (E.g. Stack, Queue)",,,,,,2023-10-27,,
+task,DD-II: Encoders,,,,,,2023-10-27,,
+task,Eng-III: The basic unit of human interaction,,,,,,2023-10-28,,
+task,OOP-II: Extending interfaces,,,,,,2023-10-28,,
+task,DSA-III: Binary trees: Expression trees,,,,,,2023-10-29,,
+task,Math-III: Graph terminology and special types of graphs,,,,,,2023-10-29,,
+task,Eng-III: understanding values in a human-to-human relationship,,,,,,2023-10-29,,
+task,DD-II: Multiplexers,,,,,,2023-10-30,,
+task,OOP-II: Inheritance versus delegation,,,,,,2023-10-30,,
+task,Eng-III: Understanding Trust,,,,,,2023-10-31,,
+task,Math-III: Subgraphs,,,,,,2023-10-31,,
+task,DD-II: Introduction to HDL,,,,,,2023-11-01,,
+task,Eng-III: The foundational value in relationship,,,,,,2023-11-01,,
+task,DSA Lab: 6. Implement AVL trees (e.g Implement dictionary),,,,,,2023-11-02,,
+task,DD Lab: 5. Design and implement shift-registers.,,,,,,2023-11-02,,
+task,DSA-III: Binary search tree ADT,,,,,,2023-11-02,,
+task,Eng-III: Difference between intention and competence,,,,,,2023-11-03,,
+task,OOP-II: Inheritance rules,,,,,,2023-11-03,,
+task,OOP-II: Inner classes,,,,,,2023-11-04,,
+task,DD-II: HDL Models of Combinational circuits. ,,,,,,2023-11-04,,
+task,Math-III: Matrix representation of graphs and graph isomorphism,,,,,,2023-11-05,,
+task,Eng-III: Understanding Respect,,,,,,2023-11-05,,
+task,DSA-III: AVL trees,,,,,,2023-11-05,,
+task,OOP-II: Examples in Java. ,,,,,,2023-11-06,,
+task,DD-III: Sequential Circuits,,,,,,2023-11-06,,
+task,Eng-III: as the right evaluation,,,,,,2023-11-07,,
+task,Math-III: Connectivity,,,,,,2023-11-07,,
+task,OOP Lab: 5. Programs using Exception handling. (E.g. Bank Account manipulation),,,,,,2023-11-08,,
+task,OOP-III: Polymorphism: Method overloading and overriding,,,,,,2023-11-08,,
+task,DSA-III: Tree traversals,,,,,,2023-11-09,,
+task,Eng-III: Difference between respect and differentiation,,,,,,2023-11-09,,
+task,DD-III: Storage Elements: Latches,,,,,,2023-11-09,,
+task,DSA Lab: 7. Implement priority queue using binary heaps (e.g Storing employee records based upon salary),,,,,,2023-11-10,,
+task,OOP-III: Dynamic method dispatch,,,,,,2023-11-10,,
+task,DSA-III: B- Trees,,,,,,2023-11-11,,
+task,Math-III: Eulerian and Hamilton graphs. ,,,,,,2023-11-11,,
+task,Eng-III: the other salient values in a relationship,,,,,,2023-11-12,,
+task,OOP-III: Exceptions: Hierarchy,,,,,,2023-11-12,,
+task,DD Lab: 6. Design and implement synchronous counters.,,,,,,2023-11-12,,
+task,Eng-III: Understanding the harmony in the society,,,,,,2023-11-13,,
+task,DD-III: Flip,,,,,,2023-11-13,,
+task,Math-IV: Algebraic systems,,,,,,2023-11-14,,
+task,OOP-III: Built-in exceptions,,,,,,2023-11-14,,
+task,DSA-III: Priority Queues: Binary heap. ,,,,,,2023-11-15,,
+task,Eng-III: comprehensive Human Goals,,,,,,2023-11-15,,
+task,DD-III: Flops,,,,,,2023-11-16,,
+task,Eng-III: Visualizing a universal harmonious order in society,,,,,,2023-11-16,,
+task,DSA-IV: Graph Algorithms: Definitions,,,,,,2023-11-16,,
+task,OOP-III: Creating own exception,,,,,,2023-11-17,,
+task,Math-IV: Semi groups and monoids,,,,,,2023-11-17,,
+task,Eng-III: Undivided Society,,,,,,2023-11-18,,
+task,DD-III: Analysis of Clocked Sequential Circuits,,,,,,2023-11-18,,
+task,OOP-III: Packages in Java,,,,,,2023-11-19,,
+task,DSA-IV: Representation of graphs,,,,,,2023-11-19,,
+task,Math-IV: Groups,,,,,,2023-11-19,,
+task,Eng-III: Universal Order,,,,,,2023-11-20,,
+task,OOP-III: Examples in Java. ,,,,,,2023-11-20,,
+task,OOP Lab: 6. Program to implement packages (Eg: Currency converter),,,,,,2023-11-21,,
+task,DD-III: State Reduction and Assignment,,,,,,2023-11-21,,
+task,DSA Lab: 8. Graph representation and implement graph traversal algorithms,,,,,,2023-11-22,,
+task,Eng-III: From family to world family! ,,,,,,2023-11-22,,
+task,Math-IV: Subgroups Homomorphisms,,,,,,2023-11-23,,
+task,DSA-IV: Graph Traversals: Breadth-first traversal,,,,,,2023-11-23,,
+task,OOP-IV: Definition and concepts: Generic classes and generic methods,,,,,,2023-11-23,,
+task,DD-III: Design Procedure,,,,,,2023-11-24,,
+task,Eng-IV: Understanding the harmony in Nature,,,,,,2023-11-24,,
+task,DD Lab: 7. Design and implement asynchronous counters.,,,,,,2023-11-25,,
+task,OOP-IV: Generic types,,,,,,2023-11-25,,
+task,DD-III: Registers and Counters,,,,,,2023-11-26,,
+task,Eng-IV: Interconnectedness,,,,,,2023-11-26,,
+task,Math-IV: Normal subgroup and coset,,,,,,2023-11-26,,
+task,DSA-IV: Depth-first traversal,,,,,,2023-11-27,,
+task,OOP-IV: Restrictions and limitations,,,,,,2023-11-27,,
+task,Eng-IV: self-regulation and mutual fulfilment among the four orders of nature,,,,,,2023-11-28,,
+task,DSA-IV: Topological sort,,,,,,2023-11-28,,
+task,Math-IV: Lagrange’s theorem,,,,,,2023-11-29,,
+task,DD-III: HDL Models of Sequential Circuits. ,,,,,,2023-11-29,,
+task,OOP-IV: Inheritance rules for generic types,,,,,,2023-11-30,,
+task,Eng-IV: recyclability,,,,,,2023-11-30,,
+task,Eng-IV: Understanding Existence as Coexistence of mutually interacting units in all-pervasive space,,,,,,2023-11-30,,
+task,OOP-IV: Reflections,,,,,,2023-12-01,,
+task,DSA Lab: 9. Implement Dijkstra’s algorithm using graph (e.g Find the shortest route to connect one city to another),,,,,,2023-12-01,,
+task,DSA-IV: Shortest-Path Algorithms: Dijkstra’s algorithm,,,,,,2023-12-02,,
+task,DD-IV: Analysis and Design of Asynchronous Sequential Circuits,,,,,,2023-12-02,,
+task,Math-IV: Definitions and examples of Rings and Fields. ,,,,,,2023-12-03,,
+task,Eng-IV: Holistic perception of harmony at all levels of existence. ,,,,,,2023-12-03,,
+task,OOP-IV: Examples in Java. ,,,,,,2023-12-03,,
+task,"OOP Lab: 7. Program to implement generic classes, methods (Eg: Generic stack, Sorting)",,,,,,2023-12-04,,
+task,DD-IV: Reduction of State and Flow Tables,,,,,,2023-12-04,,
+task,Math-V: Partial ordering,,,,,,2023-12-05,,
+task,DSA-IV: All-pairs shortest path. ,,,,,,2023-12-05,,
+task,Eng-V: Natural acceptance of human values,,,,,,2023-12-06,,
+task,DD Lab: 8. Coding combinational circuits using HDL.,,,,,,2023-12-06,,
+task,OOP-V: ALGORITHMS 9 Introduction to collections,,,,,,2023-12-07,,
+task,Eng-V: Definitiveness of Ethical Human Conduct,,,,,,2023-12-07,,
+task,DD-IV: Race-free State Assignment,,,,,,2023-12-07,,
+task,Math-V: Posets,,,,,,2023-12-08,,
+task,OOP-V: Collection Classes and Interfaces: Array list,,,,,,2023-12-08,,
+task,Eng-V: Basis for Humanistic Education,,,,,,2023-12-09,,
+task,DSA-V: Sorting: Insertion sort,,,,,,2023-12-09,,
+task,DD-IV: Hazards. ,,,,,,2023-12-10,,
+task,OOP-V: Linked list,,,,,,2023-12-10,,
+task,DSA Lab: 10. Implement any two sorting algorithms,,,,,,2023-12-10,,
+task,Math-V: Lattices as Posets,,,,,,2023-12-11,,
+task,DSA-V: Shell sort,,,,,,2023-12-11,,
+task,Eng-V: Humanistic Constitution and Humanistic Universal Order,,,,,,2023-12-12,,
+task,OOP-V: Queue,,,,,,2023-12-12,,
+task,DD-V: RAM,,,,,,2023-12-13,,
+task,Eng-V: Competence in Professional Ethics,,,,,,2023-12-13,,
+task,Math-V: Properties of lattices,,,,,,2023-12-14,,
+task,OOP-V: Set,,,,,,2023-12-14,,
+task,DSA-V: Radix Exchange sort,,,,,,2023-12-14,,
+task,Eng-V: augmenting universal human order,,,,,,2023-12-15,,
+task,DD-V: Memory Decoding,,,,,,2023-12-15,,
+task,OOP-V: Trees,,,,,,2023-12-16,,
+task,Eng-V: the scope and characteristics of people-friendly and eco-friendly,,,,,,2023-12-16,,
+task,DSA-V: Hashing: Hash function,,,,,,2023-12-17,,
+task,"OOP Lab: 8. Program to perform operations using Collection classes (Eg: ArrayList, LinkedList)",,,,,,2023-12-17,,
+task,Math-V: Lattices as algebraic systems,,,,,,2023-12-17,,
+task,DD-V: Error Detection and Correction,,,,,,2023-12-18,,
+task,Eng-V: Holistic Technologies,,,,,,2023-12-18,,
+task,DD Lab: 9. Coding sequential circuits using HDL.,,,,,,2023-12-19,,
+task,OOP-V: Iterators for collections,,,,,,2023-12-19,,
+task,Eng-V: production systems and management models,,,,,,2023-12-20,,
+task,DSA-V: Separate chaining,,,,,,2023-12-20,,
+task,Math-V: Sublattices,,,,,,2023-12-21,,
+task,DSA Lab: 11. Implement hashing using separate chaining technique,,,,,,2023-12-21,,
+task,OOP-V: Map class,,,,,,2023-12-21,,
+task,DD-V: ROM,,,,,,2023-12-22,,
+task,Eng-V: Case studies,,,,,,2023-12-22,,
+task,DSA-V: Open addressing,,,,,,2023-12-23,,
+task,OOP-V: Collection algorithms: Sorting,,,,,,2023-12-23,,
+task,Math-V: Direct product and Homomorphism,,,,,,2023-12-24,,
+task,Eng-V: Strategy for the transition from the present state to Universal Human Order,,,,,,2023-12-24,,
+task,DD-V: Programmable Logic Array,,,,,,2023-12-24,,
+task,OOP-V: Searching,,,,,,2023-12-25,,
+task,Math-V: Boolean algebra,,,,,,2023-12-25,,
+task,Eng-V: At the level of individual: as socially and ecologically responsible engineers,,,,,,2023-12-26,,
+task,DSA-V: Rehashing,,,,,,2023-12-26,,
+task,OOP-V: User-defined algorithms,,,,,,2023-12-27,,
+task,DD-V: Programmable Array Logic,,,,,,2023-12-27,,
+task,Eng-V: technologists and managers,,,,,,2023-12-28,,
+task,Math-V: Stone’s representation Theorem. ,,,,,,2023-12-28,,
+task,Eng-V: At the level of society: as mutually enriching institutions and organizations. ,,,,,,2023-12-28,,
+task,DD Lab: 10. Design and implementation of a simple digital system (Mini Project).,,,,,,2023-12-29,,
+task,DSA-V: Extendible hashing. ,,,,,,2023-12-29,,
+task,OOP-V: Examples in Java. ,,,,,,2023-12-30,,
+task,DD-V: Sequential Programmable Devices. ,,,,,,2023-12-30,,
+task,DSA Lab: 12. Mini Project,,,,,,2023-12-31,,
+task,OOP Lab: 9. Develop a mini project for any application using the constructs of Java.,,,,,,2023-12-31,,
