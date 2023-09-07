@@ -180,7 +180,8 @@ def gantt_rows(args, task_list):
 def to_todoist(df: pd.DataFrame):
     df = df.rename({"NAME": "CONTENT", "START": "DATE"}, axis = 1)
     df['TYPE'] = 'task'
-    df['DESCRIPTION'] = df['PRIORITY'] = df['INDENT'] = df['AUTHOR'] = df['RESPONSIBLE'] = df['DATE_LANG'] = df['TIMEZONE'] = ""
+    df['DATE_LANG'] ='en'
+    df['DESCRIPTION'] = df['PRIORITY'] = df['INDENT'] = df['AUTHOR'] = df['RESPONSIBLE'] = df['TIMEZONE'] = ""
     new = df[['TYPE','CONTENT','DESCRIPTION','PRIORITY','INDENT','AUTHOR','RESPONSIBLE','DATE','DATE_LANG','TIMEZONE']]
     return new
 
