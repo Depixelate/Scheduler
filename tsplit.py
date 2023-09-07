@@ -14,18 +14,18 @@ parser = argparse.ArgumentParser(
     description="Takes a list of tasks to do, and generates a list of todoist tasks and gantt chart tasks in a csv file which can easily be uploaded to a gantt app or todoist.",
 )
 parser.add_argument(
-    "path", default="tasks.txt", help="path of the text file containing list of tasks."
+    "-p", "--path", default="tasks.txt", help="path of the text file containing list of tasks,.default tasks.txt"
 )
 parser.add_argument(
     "-s",
     "--start",
-    default=date.today(),
+    default=date.today().isoformat(),
     help="The day from which you want to start scheduling the tasks, default today.",
 )
 parser.add_argument(
     "-e",
     "--end",
-    default=date.today(),
+    default=date.today().isoformat(),
     help="The last day from which you want to schedule tasks.",
 )
 parser.add_argument(
@@ -239,12 +239,12 @@ if args.output != "" and not args.output[-1] == "/":
 init_path = f"{args.output}{args.name}_"
 td_split = td_split.sort_values("START", axis=0, ignore_index=True)
 td_split = to_todoist(td_split)
-td_split.to_csv(init_path + "td_split.csv")
+td_split.to_csv(init_path + "td_split.csv", index=False)
 gantt = gantt.sort_values("START", axis=0, ignore_index=True)
-gantt.to_csv(init_path + "gantt.csv")
+gantt.to_csv(init_path + "gantt.csv", index=False)
 td_inter = td_inter.sort_values("START", axis=0, ignore_index=True)
 td_inter = to_todoist(td_inter)
-td_inter.to_csv(init_path + "td_inter_rows.csv")
+td_inter.to_csv(init_path + "td_inter_rows.csv", index=False)
 
 
 # parts_lines = []
