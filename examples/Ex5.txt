@@ -1,0 +1,18 @@
+   title:MathAssn
+    1. The dimensional cube  defined as that graph whose vertex set is the set of ordered tuples of  (Commonly called  bit strings) and where two vertices are adjacent if their ordered tuples differ in exactly one position (co-ordinate).  The dimensional cubes for  are shown in Figure.
+
+    (i) Find the number of vertices and edges in  for all       
+    (ii) Prove that  is a bipartite graph for all 
+    (iii) Write a Hamiltonian cycle of  using the Hamiltonian cycle of 
+    (iv) Is  Eulerian?  If so, Explain.
+    (v) Let  be the graph whose vertex set is the set of k-tuples with elements in {0,1}, with vertex  adjacent to  if  and  differ in exactly two positions.   Determine the number of components of G.
+    2. Write the 6 basic NP-complete problems. Explain 3-SATISFIABILITY (3-SAT) problem and compare with PDNF and PCNF. 
+    3. Let A(G) be the adjacency matrix of a graph G. Prove that the eigenvalues of complete graph  are  with multiplicity 1 and -1 with multiplicity 
+(ii) The graph energy as the sum of the absolute values of the eigenvalues of the adjacency matrix of G. The energy of a graph is a concept originating from theoretical chemistry that is related to the total π-electron energy in a molecule represented by a (molecular) graph.
+
+Find  and  where  are complete and cycle graph on points.
+    4. Consider the semigroups  (integers modulo 4 under addition) and ( integers modulo 10 under usual multiplication).  Let   and  be subsets of the above two semigroups respectively.  Prove that  and  are isomorphic. 	
+    5. Prove that if  is a group with order of  is strictly less than 6, then  is abelian. (Prove all its necessary propositions and theorems)
+    6. If  is the power set of a set   and  and  are taken as the join and meet, prove that   is a lattice. 				       
+    (i)  Draw the Hasse diagram of the lattice   in which the join and meet are the operations  and  respectively, where .  	      
+    (ii) Identify a sub lattice of this lattice with four elements  and a subset  of this lattice with four elements which is  not a sublattice. 	

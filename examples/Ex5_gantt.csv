@@ -1,0 +1,7 @@
+NAME,START,END
+MathAssn: 1. The dimensional cube  defined as that graph whose vertex set is the set of ordered tuples of  (Commonly called  bit strings) and where two vertices are adjacent if their ordered tuples differ in exactly one position (co-ordinate).  The dimensional cubes for  are shown in Figure.,2023-11-12,2023-11-15
+MathAssn: 2. Write the 6 basic NP-complete problems. Explain 3-SATISFIABILITY (3-SAT) problem and compare with PDNF and PCNF. ,2023-11-15,2023-11-18
+MathAssn: 3. Let A(G) be the adjacency matrix of a graph G. Prove that the eigenvalues of complete graph  are  with multiplicity 1 and -1 with multiplicity ,2023-11-18,2023-11-21
+MathAssn: 4. Consider the semigroups  (integers modulo 4 under addition) and ( integers modulo 10 under usual multiplication).  Let   and  be subsets of the above two semigroups respectively.  Prove that  and  are isomorphic. 	,2023-11-21,2023-11-24
+"MathAssn: 5. Prove that if  is a group with order of  is strictly less than 6, then  is abelian. (Prove all its necessary propositions and theorems)",2023-11-24,2023-11-27
+"MathAssn: 6. If  is the power set of a set   and  and  are taken as the join and meet, prove that   is a lattice. 				       ",2023-11-27,2023-11-30

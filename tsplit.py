@@ -6,19 +6,13 @@ import re
 import argparse
 from datetime import date, timedelta
 import math
+import pathlib
 
 import pandas as pd
 
 
 parser = argparse.ArgumentParser(
     description="Takes a list of tasks to do, and generates a list of todoist tasks and gantt chart tasks in a csv file which can easily be uploaded to a gantt app or todoist.",
-)
-
-parser.add_argument(
-    "-r",
-    "--priority",
-    default="2",
-    help="the priority of the task in todist (default: 2)",
 )
 
 parser.add_argument(
@@ -43,7 +37,7 @@ parser.add_argument(
     "-i",
     "--interval",
     default=None,
-    help="Schedules tasks with a specified interval of days between them, instead of based on an end date. Note using this option means the value for -e is ignored."
+    help="Schedules tasks with a specified interval of days between them, instead of based on an end date. Note using this option means the value for -e is ignored.",
 )
 parser.add_argument(
     "-f",
@@ -51,8 +45,15 @@ parser.add_argument(
     action="store_true",
     help="Moves the end date back such that you have the exact same number of tasks per day (default: false)",
 )
-parser.add_argument("-o", "--output", help="output directory (default: current directory)", default="")
-parser.add_argument("-n", "--name", help="prefix for output files (default: name of the file containing tasks)", default=None)
+parser.add_argument(
+    "-o", "--output", help="output directory (default: current directory)", default=""
+)
+parser.add_argument(
+    "-n",
+    "--name",
+    help="prefix for output files (default: name of the file containing tasks)",
+    default=None,
+)
 parser.add_argument(
     "-ut",
     "--unit-title",
@@ -73,6 +74,19 @@ parser.add_argument(
     help="adds subject title prefix for portions",
     action=argparse.BooleanOptionalAction,
     default=True,
+)
+parser.add_argument(
+    "-r",
+    "--priority",
+    default="2",
+    help="the priority of the task in todist (default: 2)",
+)
+parser.add_argument(
+    "-m",
+    "--mode",
+    choices=["s", "single", "m", "multi", "multiple"],
+    help="whether it should treat the input as a single list, or multiple lists each separated by a blank line.",
+    required=True,
 )
 
 # parser.add_argument("-md", "--max-denominator", help = "the maximum denominator when splitting tasks by day, default 12, set to 0 for no limit", default = 12)
@@ -100,29 +114,32 @@ def parse_tasks(args, part):
 
     returns: task_list, the list of tasks to convert to todoist/gannt form.
     """
-    list_exp = r"(^\d+\.\s*(?:(?!\n\d+\.).)*)"
+    list_exp = r"^\s*(\d+\.\s*(?:(?!\n\d+\.).)*)"
     portions_unit_heading_exp = r"^UNIT\s+(?P<unit_number>[^\s]*)\s+(?P<unit_name>.*)\s*"  # Single Line Regex which matches a Unit Number and Name Alone
     task_list = []
 
     prefix = ""
 
-    subject_title_exp = r"^title:\s*(.*)\n"
-    if args.subject_title and (subject_title_matches := re.findall(
+    subject_title_exp = r"^\s*title:\s*(.*)\n"
+    if args.subject_title and (
+        subject_title_matches := re.findall(
             subject_title_exp, part, flags=re.MULTILINE | re.IGNORECASE
-        )):
+        )
+    ):
         subject_title = subject_title_matches[0]
         prefix = add_prefix(prefix, subject_title)
         part = re.sub(subject_title_exp, r"", part)
 
     part = part.strip()
 
-    if re.search(
-        list_exp, part, flags=re.MULTILINE | re.DOTALL
-    ):  # List of tasks in form 1. ..., 2. ..., etc.
-        task_list = re.findall(list_exp, part, flags=re.MULTILINE | re.DOTALL)
-
+    if re.search(list_exp, part, flags=re.MULTILINE):  # List of tasks in form
+        # 1. ...
+        # 2. ...
+        # etc.
+        task_list = re.findall(list_exp, part, flags=re.MULTILINE)
+        #print(task_list)
         task_list = [combine_prefix(prefix, topic) for topic in task_list]
-
+        #print(task_list)
     elif re.search(portions_unit_heading_exp, part):  # In portions format
         task_list = parse_portions(args, part, portions_unit_heading_exp, prefix)
     else:  # As a normal list
@@ -212,7 +229,7 @@ def start_end_days(args, num_tasks):
     if not args.interval:
         end = date.fromisoformat(args.end)
     else:
-        end = start + timedelta(days=num_tasks*float(args.interval))
+        end = start + timedelta(days=num_tasks * float(args.interval))
 
     date_diff = end - start
     days = date_diff.days
@@ -328,11 +345,18 @@ def td_inter_rows(args, gantt: pd.DataFrame):
 
 
 args = parser.parse_args()
+testPath = pathlib.Path(args.path)
+if not testPath.exists():
+    parser.error("The path provided to --path does not exist! (If no path was provided, then 'tasks.txt' was assumed to be the path)")
 
 with open(args.path, "r") as f:
     text = f.read()
 
-parts = text.split("\n\n")  #
+parts = [text]
+
+if "m" in args.mode:
+    parts = text.split("\n\n")
+
 task_lists = [parse_tasks(args, part) for part in parts]
 
 with open("log.txt", "w") as f:
@@ -343,7 +367,9 @@ with open("log.txt", "w") as f:
 
 td_split, td_inter, gantt = [], [], []
 for task_list in task_lists:
-    g_rows = gantt_rows(args, task_list) # Gannt basically does the timing calculation, the rest just convert from gannt to the desired format.
+    g_rows = gantt_rows(
+        args, task_list
+    )  # Gannt basically does the timing calculation, the rest just convert from gannt to the desired format.
     td_split.extend(td_split_rows(g_rows))
     gantt.extend(g_rows)
 td_split = pd.DataFrame(td_split, columns=["NAME", "START"])
