@@ -15,28 +15,35 @@ parser = argparse.ArgumentParser(
 )
 
 parser.add_argument(
+    "-r",
+    "--priority",
+    default="2",
+    help="the priority of the task in todist (default: 2)",
+)
+
+parser.add_argument(
     "-p",
     "--path",
     default="tasks.txt",
-    help="path of the text file containing list of tasks, default tasks.txt",
+    help="path of the text file containing list of tasks (default: tasks.txt)",
 )
 parser.add_argument(
     "-s",
     "--start",
     default=date.today().isoformat(),
-    help="The day from which you want to start scheduling the tasks, default today, in ISO format (YYYY-MM-DD)",
+    help="The day from which you want to start scheduling the tasks, in ISO format (YYYY-MM-DD) (default: today)",
 )
 parser.add_argument(
     "-e",
     "--end",
     default=date.today().isoformat(),
-    help="The last day from which you want to schedule tasks, in ISO format (YYYY-MM-DD)",
+    help="The last day from which you want to schedule tasks, in ISO format (YYYY-MM-DD) (default: today)",
 )
 parser.add_argument(
     "-f",
     "--fit",
     action="store_true",
-    help="Shrinkes the time so that you have the exact same number of tasks per day.",
+    help="Moves the end date back such that you have the exact same number of tasks per day (default: false)",
 )
 parser.add_argument("-o", "--output", help="output directory", default="")
 parser.add_argument("-n", "--name", help="prefix for output files", default=None)
@@ -154,7 +161,7 @@ def parse_portions(
         " – "
     ):  # We know it is a special case, like understanding harmony syntax.
         part = part.replace("–", ":")
-    
+
     units = re.split(portions_unit_heading_exp, part, flags=re.MULTILINE)[
         1:
     ]  # Matches unit heading, splits the part into constituent units. re.split output is in format [(content matched by capture group in split regex 1), (content matched by capture group in split regex 2), ... (actual data between split regex), ...(repeats)]
@@ -255,13 +262,14 @@ def gantt_rows(args, task_list):
     return rows
 
 
-def to_todoist(df: pd.DataFrame):
+def to_todoist(df: pd.DataFrame, priority: str):
     df = df.rename({"NAME": "CONTENT", "START": "DATE"}, axis=1)
     df["TYPE"] = "task"
     df["DATE_LANG"] = "en"
-    df["DESCRIPTION"] = df["PRIORITY"] = df["INDENT"] = df["AUTHOR"] = df[
-        "RESPONSIBLE"
-    ] = df["TIMEZONE"] = ""
+    df["PRIORITY"] = priority
+    df["DESCRIPTION"] = df["INDENT"] = df["AUTHOR"] = df["RESPONSIBLE"] = df[
+        "TIMEZONE"
+    ] = ""
     new = df[
         [
             "TYPE",
@@ -337,12 +345,12 @@ if args.output != "" and not args.output[-1] == "/":
     args.output += "/"
 init_path = f"{args.output}{args.name}_"
 td_split = td_split.sort_values("START", axis=0, ignore_index=True)
-td_split = to_todoist(td_split)
+td_split = to_todoist(td_split, args.priority)
 td_split.to_csv(init_path + "td_split.csv", index=False)
 gantt = gantt.sort_values("START", axis=0, ignore_index=True)
 gantt.to_csv(init_path + "gantt.csv", index=False)
 td_inter = td_inter.sort_values("START", axis=0, ignore_index=True)
-td_inter = to_todoist(td_inter)
+td_inter = to_todoist(td_inter, args.priority)
 td_inter.to_csv(init_path + "td_inter_rows.csv", index=False)
 
 
