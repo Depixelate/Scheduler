@@ -1,0 +1,16 @@
+,NAME,START,END
+0,1. Verification of Boolean Theorems using basic gates.,2023-09-04,2023-09-15
+1,"2. Design and implementation of combinational circuits using basic gates for arbitrary functions, code
+converters.",2023-09-15,2023-09-27
+2,3. Design and implement half/full adder and subtractor.,2023-09-27,2023-10-09
+3,"4. Design and implement combinational circuits using MSI devices:
+• 4-bit binary adder/subtractor
+• Parity generator/checker
+• Magnitude Comparator
+• Application using multiplexers",2023-10-09,2023-10-21
+4,5. Design and implement shift-registers.,2023-10-21,2023-11-02
+5,6. Design and implement synchronous counters.,2023-11-02,2023-11-14
+6,7. Design and implement asynchronous counters.,2023-11-14,2023-11-26
+7,8. Coding combinational circuits using HDL.,2023-11-26,2023-12-08
+8,9. Coding sequential circuits using HDL.,2023-12-08,2023-12-20
+9,10. Design and implementation of a simple digital system (Mini Project).,2023-12-20,2024-01-01
