@@ -37,7 +37,13 @@ parser.add_argument(
     "-e",
     "--end",
     default=date.today().isoformat(),
-    help="The last day from which you want to schedule tasks, in ISO format (YYYY-MM-DD) (default: today)",
+    help="Day after the last day you want tasks to be scheduled for, in ISO format (YYYY-MM-DD) (default: today)",
+)
+parser.add_argument(
+    "-i",
+    "--interval",
+    default=None,
+    help="Schedules tasks with a specified interval of days between them, instead of based on an end date. Note using this option means the value for -e is ignored."
 )
 parser.add_argument(
     "-f",
@@ -45,8 +51,8 @@ parser.add_argument(
     action="store_true",
     help="Moves the end date back such that you have the exact same number of tasks per day (default: false)",
 )
-parser.add_argument("-o", "--output", help="output directory", default="")
-parser.add_argument("-n", "--name", help="prefix for output files", default=None)
+parser.add_argument("-o", "--output", help="output directory (default: current directory)", default="")
+parser.add_argument("-n", "--name", help="prefix for output files (default: name of the file containing tasks)", default=None)
 parser.add_argument(
     "-ut",
     "--unit-title",
@@ -68,6 +74,7 @@ parser.add_argument(
     action=argparse.BooleanOptionalAction,
     default=True,
 )
+
 # parser.add_argument("-md", "--max-denominator", help = "the maximum denominator when splitting tasks by day, default 12, set to 0 for no limit", default = 12)
 
 
@@ -99,11 +106,11 @@ def parse_tasks(args, part):
 
     prefix = ""
 
-    if args.subject_title:
-        subject_title_exp = r"^title:\s*(.*)\n"
-        subject_title = re.findall(
+    subject_title_exp = r"^title:\s*(.*)\n"
+    if args.subject_title and (subject_title_matches := re.findall(
             subject_title_exp, part, flags=re.MULTILINE | re.IGNORECASE
-        )[0]
+        )):
+        subject_title = subject_title_matches[0]
         prefix = add_prefix(prefix, subject_title)
         part = re.sub(subject_title_exp, r"", part)
 
@@ -202,11 +209,16 @@ def parse_portions(
 
 def start_end_days(args, num_tasks):
     start = date.fromisoformat(args.start)
-    end = date.fromisoformat(args.end)
+    if not args.interval:
+        end = date.fromisoformat(args.end)
+    else:
+        end = start + timedelta(days=num_tasks*float(args.interval))
+
     date_diff = end - start
     days = date_diff.days
     days_per_task = days / num_tasks
     tasks_per_day = num_tasks / days
+
     return start, end, days, days_per_task, tasks_per_day
 
 
@@ -331,7 +343,7 @@ with open("log.txt", "w") as f:
 
 td_split, td_inter, gantt = [], [], []
 for task_list in task_lists:
-    g_rows = gantt_rows(args, task_list)
+    g_rows = gantt_rows(args, task_list) # Gannt basically does the timing calculation, the rest just convert from gannt to the desired format.
     td_split.extend(td_split_rows(g_rows))
     gantt.extend(g_rows)
 td_split = pd.DataFrame(td_split, columns=["NAME", "START"])
