@@ -33,7 +33,7 @@ ecologically responsible engineers technologists and managers, At the level of s
 enriching institutions and organizations.
 TOTAL PERIODS: 45
 
-title: Math
+title: Math-C
 UNIT I LOGIC AND PROOFS 13
 Propositional Logic – Propositional equivalences – Predicates and quantifiers – Nested quantifiers – Rules
 of inference – Introduction to proofs – Proof methods and strategy – Normal forms – Applications to
@@ -42,6 +42,8 @@ UNIT II COMBINATORICS 11
 Mathematical induction – Strong induction – The pigeonhole principle – Recurrence relations – Partition
 of integers – Solving linear recurrence relations using generating functions – Inclusion and Exclusion
 Principle and its applications.
+
+title: Math
 UNIT III GRAPHS 10
 Graphs – Graph terminology and special types of graphs – Subgraphs – Matrix representation of graphs
 and graph isomorphism – Connectivity – Eulerian and Hamilton graphs.
@@ -53,14 +55,17 @@ Partial ordering – Posets – Lattices as Posets – Properties of lattices �
 Sublattices – Direct product and Homomorphism; Boolean algebra – Stone’s representation Theorem.
 TOTAL PERIODS: 60
 
-title: DD
+title: DD-C
 UNIT I BOOLEAN ALGEBRA AND LOGIC GATES 9
 Number Systems – Arithmetic Operations – Binary Codes– Boolean Algebra and Logic Gates – Theorems
 and Properties of Boolean Algebra – Boolean Functions – Canonical and Standard Forms – Simplification
 of Boolean Functions using Karnaugh Map – Logic Gates – NAND and NOR Implementations.
 UNIT II COMBINATIONAL LOGIC 9
-Combinational Circuits – Analysis and Design Procedures – Binary Adder–Subtractor – Decimal Adder
-– Binary Multiplier – Magnitude Comparator – Decoders – Encoders – Multiplexers
+Combinational Circuits – Analysis and Design Procedures – Binary Adder–Subtractor – 
+
+title: DD
+UNIT II COMBINATIONAL LOGIC 9
+Decimal Adder – Binary Multiplier – Magnitude Comparator – Decoders – Encoders – Multiplexers
 – Introduction to HDL – HDL Models of Combinational circuits.
 UNIT III SYNCHRONOUS SEQUENTIAL LOGIC 9
 Sequential Circuits – Storage Elements: Latches – Flip-Flops; Analysis of Clocked Sequential Circuits –
@@ -74,7 +79,7 @@ RAM – Memory Decoding – Error Detection and Correction – ROM – Programma
 – Programmable Array Logic – Sequential Programmable Devices.
 TOTAL PERIODS: 45
 
-title: DSA
+title: DSA-C
 UNIT I LINEAR DATA STRCTURES - LIST 9
 Algorithm Analysis: Running time calculations; Abstract Data Types (ADTs); List ADT: Array
 implementation of lists – Linked lists – Circular linked lists – Doubly linked lists – Applications of Lists:
@@ -83,6 +88,8 @@ UNIT II LINEAR DATA STRUCTURES – STACKS AND QUEUES 9
 Stack ADT: Stack model – Implementation of stacks – Applications: Balancing symbols – Infix to postfix
 conversion – Evaluating postfix expressions – Function calls; Queue ADT: Queue model – Array
 implementation of queues – Applications of queues.
+
+title: DSA
 UNIT III NON-LINEAR DATA STRUCTURES - TREES 9
 Preliminaries; Binary trees: Expression trees; Binary search tree ADT; AVL trees; Tree traversals; B-
 Trees; Priority Queues: Binary heap.
@@ -95,7 +102,7 @@ Sorting: Insertion sort – Shell sort – Radix Exchange sort; Hashing: Hash fu
 Open addressing – Rehashing – Extendible hashing.
 TOTAL PERIODS: 45
 
-title: OOP
+title: OOP-C
 UNIT I INTRODUCTION 9
 Principles of OOP: Classes – Objects – Data hiding – Data encapsulation – Inheritance – Poly- morphism;
 Definition of Classes: Objects – Methods – Access specifiers – Static and final classes and members;
@@ -106,7 +113,11 @@ Inheritance: Definition – Types of inheritance: Single – Multilevel – Mult
 constructors – Interfaces in Java: Definition – Implementation – Extending interfaces
 – Inheritance versus delegation – Inheritance rules – Inner classes – Examples in Java.
 UNIT III POLYMORPHISM AND EXCEPTION HANDLING 9
-Polymorphism: Method overloading and overriding – Dynamic method dispatch; Exceptions: Hierarchy
+Polymorphism: Method overloading and overriding – Dynamic method dispatch; 
+
+title: OOP
+UNIT III POLYMORPHISM AND EXCEPTION HANDLING 9
+Exceptions: Hierarchy
 – Built-in exceptions – Creating own exception; Packages in Java – Examples in Java.
 UNIT IV GENERIC TYPES AND METHODS 9
 Definition and concepts: Generic classes and generic methods – Generic types – Restrictions and
@@ -134,29 +145,3 @@ converters.
 8. Coding combinational circuits using HDL.
 9. Coding sequential circuits using HDL.
 10. Design and implementation of a simple digital system (Mini Project).
-
-title: DSA Lab
-1. Represent polynomial expression as linked list and write functions for polynomial manipulation
-2. Implement doubly linked list ADT (e.g Insert, delete, search, merge, reverse operations)
-3. Implementation of Stack ADT (e.g Balancing parenthesis, infix to postfix conversion, evaluation of
-postfix expression)
-4. Implementation of Queue ADT (e.g Simulating printer jobs)
-5. Implement binary search tree and produce its pre-order, in-order, and post-order traversals
-6. Implement AVL trees (e.g Implement dictionary)
-7. Implement priority queue using binary heaps (e.g Storing employee records based upon salary)
-8. Graph representation and implement graph traversal algorithms
-9. Implement Dijkstra’s algorithm using graph (e.g Find the shortest route to connect one city to another)
-10. Implement any two sorting algorithms
-11. Implement hashing using separate chaining technique
-12. Mini Project
-
-title: OOP Lab
-1. Build an application using classes and objects (Eg: Electricity bill generation)
-2. Develop an application using Inheritance (Eg: Payroll application)
-3. Write a program to experiment with Polymorphism (E.g. Area of different shapes)
-4. Design a Java interface for ADTs. (E.g. Stack, Queue)
-5. Programs using Exception handling. (E.g. Bank Account manipulation)
-6. Program to implement packages (Eg: Currency converter)
-7. Program to implement generic classes, methods (Eg: Generic stack, Sorting)
-8. Program to perform operations using Collection classes (Eg: ArrayList, LinkedList)
-9. Develop a mini project for any application using the constructs of Java.

@@ -13,20 +13,24 @@ import pandas as pd
 parser = argparse.ArgumentParser(
     description="Takes a list of tasks to do, and generates a list of todoist tasks and gantt chart tasks in a csv file which can easily be uploaded to a gantt app or todoist.",
 )
+
 parser.add_argument(
-    "-p", "--path", default="tasks.txt", help="path of the text file containing list of tasks,.default tasks.txt"
+    "-p",
+    "--path",
+    default="tasks.txt",
+    help="path of the text file containing list of tasks, default tasks.txt",
 )
 parser.add_argument(
     "-s",
     "--start",
     default=date.today().isoformat(),
-    help="The day from which you want to start scheduling the tasks, default today.",
+    help="The day from which you want to start scheduling the tasks, default today, in ISO format (YYYY-MM-DD)",
 )
 parser.add_argument(
     "-e",
     "--end",
     default=date.today().isoformat(),
-    help="The last day from which you want to schedule tasks.",
+    help="The last day from which you want to schedule tasks, in ISO format (YYYY-MM-DD)",
 )
 parser.add_argument(
     "-f",
@@ -40,18 +44,22 @@ parser.add_argument(
     "-ut",
     "--unit-title",
     help="adds unit title prefix for portions",
-    action = argparse.BooleanOptionalAction,
-    default=False
+    action=argparse.BooleanOptionalAction,
+    default=False,
 )
 parser.add_argument(
     "-un",
     "--unit-number",
     help="adds unit number prefix for portions",
     action=argparse.BooleanOptionalAction,
-    default=True
+    default=True,
 )
 parser.add_argument(
-    "-st", "--subject-title", help="adds subject title prefix for portions", action=argparse.BooleanOptionalAction, default=True
+    "-st",
+    "--subject-title",
+    help="adds subject title prefix for portions",
+    action=argparse.BooleanOptionalAction,
+    default=True,
 )
 # parser.add_argument("-md", "--max-denominator", help = "the maximum denominator when splitting tasks by day, default 12, set to 0 for no limit", default = 12)
 
@@ -67,16 +75,28 @@ def combine_prefix(prefix, topic):
     return topic if prefix == "" else f"{prefix}: {topic}"
 
 
-def parse_list(args, part):
+def parse_tasks(args, part):
+    """
+    First, if the user wants the title to prefix the task, reads the title, sets it as prefix
+    Then, it tries and detects the format, and based on that parse and return a list of tasks.
+
+    args: command line arguments
+    part: An independent part of the input document, separated from other content by a blank line,
+    can either be a list of tasks, or in portions format(see Ex1/Ex2 for details)
+
+    returns: task_list, the list of tasks to convert to todoist/gannt form.
+    """
     list_exp = r"(^\d+\.\s*(?:(?!\n\d+\.).)*)"
-    portions_exp = r"^UNIT\s+(?P<unit_number>[^\s]*)\s+(?P<unit_name>.*)\s*"
+    portions_unit_heading_exp = r"^UNIT\s+(?P<unit_number>[^\s]*)\s+(?P<unit_name>.*)\s*"  # Single Line Regex which matches a Unit Number and Name Alone
     task_list = []
 
     prefix = ""
 
     if args.subject_title:
         subject_title_exp = r"^title:\s*(.*)\n"
-        subject_title = re.findall(subject_title_exp, part, flags=re.MULTILINE | re.IGNORECASE)[0]
+        subject_title = re.findall(
+            subject_title_exp, part, flags=re.MULTILINE | re.IGNORECASE
+        )[0]
         prefix = add_prefix(prefix, subject_title)
         part = re.sub(subject_title_exp, r"", part)
 
@@ -89,30 +109,87 @@ def parse_list(args, part):
 
         task_list = [combine_prefix(prefix, topic) for topic in task_list]
 
-    elif re.search(portions_exp, part):  # In portions format
-        units = re.split(portions_exp, part, flags=re.MULTILINE)[1:]
-        units[-1] = re.sub(r"^TOTAL PERIODS:.*$", r"", units[-1], flags=re.MULTILINE)
-
-        for unit_number, unit_title, portions in zip(
-            units[::3], units[1::3], units[2::3]
-        ):
-            new_prefix = prefix
-            portions = portions.replace("\n", " ").replace(";", "–").replace(",", "–")
-            topics = re.split(r"\s*–\s*", portions)
-
-            if args.unit_number:
-                new_prefix = add_prefix(prefix, unit_number)
-            if args.unit_title:
-                new_prefix = add_prefix(prefix, unit_title)
-
-            topics = [combine_prefix(new_prefix, topic) for topic in topics]
-
-            task_list.extend(topics)
+    elif re.search(portions_unit_heading_exp, part):  # In portions format
+        task_list = parse_portions(args, part, portions_unit_heading_exp, prefix)
     else:  # As a normal list
-        task_list = part.split("\n")
+        topics = part.split("\n")
 
-        topics = [combine_prefix(prefix, topic) for topic in task_list]
+        task_list = [
+            combine_prefix(prefix, topic) for topic in topics
+        ]  # we can't do this at the end for all of these, as the prefix changes from chapter to chapter.
 
+    return task_list
+
+
+def parse_portions(
+    args,
+    part,
+    portions_unit_heading_exp,
+    prefix,
+):
+    """
+    parses part according to the portions format, returns a list of tasks = topics + prefix
+
+    portions_unit_heading_exp: The regular expression used to a)detect if the part is in portions format, and
+    b) split the part into units, parse the unit to get the unit number, and the unit content.
+
+    prefix: The string to prepend to every 'topic' (topic in portions without subject title or unit title/number) to convert it to a task(a topic with the extra info mentioned before prepended)
+    """
+
+    """
+    Suggestion for improving parsing so context given for tasks:
+    For portions, first we apply:
+    First apply:
+    a - b, c, d -> a: b - c - d;
+    then:
+    a, b, c- -> a - b - c
+    then:
+    a: b - c: d - e -> a:b - a:c:d - a:c:e, terminates with ; or .
+    then:
+    split on "-"
+    """
+
+    task_list = []
+    if part.count(",") > part.count(
+        " – "
+    ):  # We know it is a special case, like understanding harmony syntax.
+        part = part.replace("–", ":")
+    
+    units = re.split(portions_unit_heading_exp, part, flags=re.MULTILINE)[
+        1:
+    ]  # Matches unit heading, splits the part into constituent units. re.split output is in format [(content matched by capture group in split regex 1), (content matched by capture group in split regex 2), ... (actual data between split regex), ...(repeats)]
+    units[-1] = re.sub(
+        r"^TOTAL PERIODS:.*$", r"", units[-1], flags=re.MULTILINE
+    )  # The end of every part containing portions will have 'Total Number of Periods' Line we don't want: (see example), so we just replace that with "" to remove it.
+
+    for unit_number, unit_title, unit_content in zip(
+        units[::3], units[1::3], units[2::3]
+    ):
+        new_prefix = prefix
+        # TERMINATORS = [";", ".", "$"]
+        unit_content = unit_content.replace("\n", " ")
+
+        # if args.other_mode:
+        #     TERMINATORS_1 = TERMINATORS + [","]
+        #     HEADER = r"([^–,;]+)"
+        #     SUBTOPICS = r"((?:[^,–;]+,)*)"
+        #     END = r"([^,–;]+)(?:,|;|\.|$)"
+        #     find1 = rf"{HEADER}–{SUBTOPICS}{END}"
+        #     find1 matches all occurence of a - b, c, d..., it was going to be used to add more context, but I gave up because I thought it would take too much time.
+        #     matches = re.sub(find1, replace_func)
+
+        #
+        unit_content = unit_content.replace(";", " – ").replace(",", " – ")
+        topics = re.split(r"\s–\s", unit_content)
+
+        if args.unit_number:
+            new_prefix = add_prefix(prefix, unit_number)
+        if args.unit_title:
+            new_prefix = add_prefix(prefix, unit_title)
+
+        mini_task_list = [combine_prefix(new_prefix, topic) for topic in topics]
+
+        task_list.extend(mini_task_list)
     return task_list
 
 
@@ -177,12 +254,28 @@ def gantt_rows(args, task_list):
     ]
     return rows
 
+
 def to_todoist(df: pd.DataFrame):
-    df = df.rename({"NAME": "CONTENT", "START": "DATE"}, axis = 1)
-    df['TYPE'] = 'task'
-    df['DATE_LANG'] ='en'
-    df['DESCRIPTION'] = df['PRIORITY'] = df['INDENT'] = df['AUTHOR'] = df['RESPONSIBLE'] = df['TIMEZONE'] = ""
-    new = df[['TYPE','CONTENT','DESCRIPTION','PRIORITY','INDENT','AUTHOR','RESPONSIBLE','DATE','DATE_LANG','TIMEZONE']]
+    df = df.rename({"NAME": "CONTENT", "START": "DATE"}, axis=1)
+    df["TYPE"] = "task"
+    df["DATE_LANG"] = "en"
+    df["DESCRIPTION"] = df["PRIORITY"] = df["INDENT"] = df["AUTHOR"] = df[
+        "RESPONSIBLE"
+    ] = df["TIMEZONE"] = ""
+    new = df[
+        [
+            "TYPE",
+            "CONTENT",
+            "DESCRIPTION",
+            "PRIORITY",
+            "INDENT",
+            "AUTHOR",
+            "RESPONSIBLE",
+            "DATE",
+            "DATE_LANG",
+            "TIMEZONE",
+        ]
+    ]
     return new
 
 
@@ -200,10 +293,12 @@ def td_inter_rows(args, gantt: pd.DataFrame):
     i = 0
     while added_tasks < len(gantt):
         done_tasks += tasks_per_day
-        done_tasks = min(done_tasks, len(gantt)) # Make sure that done_tasks doesn't become greater than total no. tasks due to floating point error.
-        #print(f"{done_tasks=}")
+        done_tasks = min(
+            done_tasks, len(gantt)
+        )  # Make sure that done_tasks doesn't become greater than total no. tasks due to floating point error.
+        # print(f"{done_tasks=}")
         while added_tasks < done_tasks:
-            #print(f"{added_tasks=}")
+            # print(f"{added_tasks=}")
             rows.append([gantt.iloc[added_tasks].NAME, start + timedelta(days=i)])
             added_tasks += 1
         i += 1
@@ -217,9 +312,8 @@ args = parser.parse_args()
 with open(args.path, "r") as f:
     text = f.read()
 
-
-parts = text.split("\n\n")
-task_lists = [parse_list(args, part) for part in parts]
+parts = text.split("\n\n")  #
+task_lists = [parse_tasks(args, part) for part in parts]
 
 with open("log.txt", "w") as f:
     for task_list in task_lists:
