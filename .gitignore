@@ -1,2 +1,3 @@
 *.txt
+!Ex*.txt
 *.csv
