@@ -1,0 +1,11 @@
+TYPE,CONTENT,DESCRIPTION,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE
+task,DD-III:  Analysis of Clocked Sequential Circuits (1/1),,2,,,,2023-11-27,en,
+task,DSA-IV:  Topological sort (1/1),,2,,,,2023-11-27,en,
+task,DD-III: HDL Models of Sequential Circuits.  (1/1),,2,,,,2023-11-28,en,
+task,DSA-V: Shell sort (1/1),,2,,,,2023-11-28,en,
+task,DD-IV: Hazards.  (1/1),,2,,,,2023-11-29,en,
+task,DSA-V: Rehashing (1/1),,2,,,,2023-11-29,en,
+task,DD-V: ROM (1/1),,2,,,,2023-11-30,en,
+task,DSA-III:  Binary search tree ADT (1/1),,2,,,,2023-11-30,en,
+task,DD-V: Sequential Programmable Devices.  (1/1),,2,,,,2023-12-01,en,
+task,DSA-III:  Priority Queues: Binary heap. (1/1),,2,,,,2023-12-01,en,

@@ -1,0 +1,24 @@
+title: DD
+UNIT III SYNCHRONOUS SEQUENTIAL LOGIC 9
+Sequential Circuits – Storage Elements: Latches – Flip-Flops; Analysis of Clocked Sequential Circuits –
+State Reduction and Assignment – Design Procedure – Registers and Counters – HDL Models of
+Sequential Circuits.
+UNIT IV ASYNCHRONOUS SEQUENTIAL LOGIC 9
+Analysis and Design of Asynchronous Sequential Circuits – Reduction of State and Flow Tables
+– Race-free State Assignment – Hazards.
+UNIT V MEMORY AND PROGRAMMABLE LOGIC 9
+RAM – Memory Decoding – Error Detection and Correction – ROM – Programmable Logic Array
+– Programmable Array Logic – Sequential Programmable Devices.
+TOTAL PERIODS: 45
+
+title: DSA
+UNIT IV NON LINEAR DATA STRUCTURES - GRAPHS 9
+Graph Algorithms: Definitions – Representation of graphs; Graph Traversals: Breadth-first traversal –
+Depth-first traversal; Topological sort – Shortest-Path Algorithms: Dijkstra’s algorithm – All-pairs
+shortest path.
+UNIT V SORTING AND HASING TECHNIQUES 9
+Sorting: Insertion sort – Shell sort – Radix Exchange sort; Hashing: Hash function – Separate chaining –
+Open addressing – Rehashing – Extendible hashing.
+UNIT III NON-LINEAR DATA STRUCTURES - TREES 9
+Preliminaries; Binary trees: Expression trees; Binary search tree ADT; AVL trees; Tree traversals; B-
+Trees; Priority Queues: Binary heap.

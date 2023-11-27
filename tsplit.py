@@ -349,7 +349,7 @@ testPath = pathlib.Path(args.path)
 if not testPath.exists():
     parser.error("The path provided to --path does not exist! (If no path was provided, then 'tasks.txt' was assumed to be the path)")
 
-with open(args.path, "r") as f:
+with open(args.path, "r", encoding = 'utf-8') as f:
     text = f.read()
 
 parts = [text]
