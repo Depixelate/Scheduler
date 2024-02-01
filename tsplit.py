@@ -243,7 +243,7 @@ def td_split_rows(g_rows):
     rows = []
     for task in g_rows:
         name, start, end = task
-        days = (end - start).days
+        days = max(1, (end - start).days)
         rows.extend(
             [
                 [f"{name} ({day+1}/{days})", start + timedelta(days=day)]
