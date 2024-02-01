@@ -323,7 +323,7 @@ def td_inter_rows(args, gantt: pd.DataFrame):
     if args.fit:
         tasks_per_day = math.ceil(tasks_per_day)
 
-    gantt = gantt.sort_values("END", ascending=True)
+    gantt = gantt.sort_values("END", ascending=True, kind="stable")
 
     added_tasks = 0
     done_tasks = 0
@@ -374,6 +374,7 @@ for task_list in task_lists:
     gantt.extend(g_rows)
 td_split = pd.DataFrame(td_split, columns=["NAME", "START"])
 gantt = pd.DataFrame(gantt, columns=["NAME", "START", "END"])
+#gantt = gantt.sort_values("START", axis=0, ignore_index=True, kind="stable") # Uncomment this if you want sorted before inter rows, this tends to jumble up the tasks from different subjects more, while not having it tends to group tasks from the same subject together.
 td_inter = td_inter_rows(args, gantt)
 if args.name == None:
     args.name = args.path
