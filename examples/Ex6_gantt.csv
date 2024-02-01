@@ -1,42 +1,42 @@
 NAME,START,END
-DD-III: Sequential Circuits,2023-11-27,2023-11-27
-DSA-IV:  Topological sort,2023-11-27,2023-11-28
-DSA-IV: Depth-first traversal,2023-11-27,2023-11-27
-DSA-IV:  Graph Traversals: Breadth-first traversal,2023-11-27,2023-11-27
-DSA-IV: Graph Algorithms: Definitions,2023-11-27,2023-11-27
-DSA-IV: Representation of graphs,2023-11-27,2023-11-27
-DD-III: Storage Elements: Latches,2023-11-27,2023-11-27
-DD-III: Flip-Flops,2023-11-27,2023-11-27
-DD-III:  Analysis of Clocked Sequential Circuits,2023-11-27,2023-11-28
-DSA-V: Shell sort,2023-11-28,2023-11-29
-DSA-V: Sorting: Insertion sort,2023-11-28,2023-11-28
-DSA-IV: All-pairs shortest path. ,2023-11-28,2023-11-28
-DSA-IV: Shortest-Path Algorithms: Dijkstra’s algorithm,2023-11-28,2023-11-28
-DD-III: Design Procedure,2023-11-28,2023-11-28
-DD-III: State Reduction and Assignment,2023-11-28,2023-11-28
-DD-III: Registers and Counters,2023-11-28,2023-11-28
-DD-III: HDL Models of Sequential Circuits. ,2023-11-28,2023-11-29
-DSA-V: Radix Exchange sort,2023-11-29,2023-11-29
-DSA-V: Rehashing,2023-11-29,2023-11-30
-DSA-V: Open addressing,2023-11-29,2023-11-29
-DSA-V: Separate chaining,2023-11-29,2023-11-29
-DSA-V:  Hashing: Hash function,2023-11-29,2023-11-29
-DD-IV: Analysis and Design of Asynchronous Sequential Circuits,2023-11-29,2023-11-29
-DD-IV: Race-free State Assignment,2023-11-29,2023-11-29
-DD-IV: Reduction of State and Flow Tables,2023-11-29,2023-11-29
-DD-IV: Hazards. ,2023-11-29,2023-11-30
-DSA-III: Preliminaries,2023-11-30,2023-11-30
-DD-V: RAM,2023-11-30,2023-11-30
-DD-V: Memory Decoding,2023-11-30,2023-11-30
-DD-V: ROM,2023-11-30,2023-12-01
-DSA-III:  Binary search tree ADT,2023-11-30,2023-12-01
-DD-V: Error Detection and Correction,2023-11-30,2023-11-30
-DSA-V: Extendible hashing. ,2023-11-30,2023-11-30
-DSA-III:  Binary trees: Expression trees,2023-11-30,2023-11-30
-DSA-III:  AVL trees,2023-12-01,2023-12-01
-DSA-III:  Tree traversals,2023-12-01,2023-12-01
-DD-V: Programmable Logic Array,2023-12-01,2023-12-01
-DD-V: Sequential Programmable Devices. ,2023-12-01,2023-12-02
-DD-V: Programmable Array Logic,2023-12-01,2023-12-01
-DSA-III:  B- Trees,2023-12-01,2023-12-01
-DSA-III:  Priority Queues: Binary heap.,2023-12-01,2023-12-02
+DD-III: Sequential Circuits,2024-02-01,2024-02-01
+DD-III: Storage Elements: Latches,2024-02-01,2024-02-01
+DD-III: Flip-Flops,2024-02-01,2024-02-01
+DD-III:  Analysis of Clocked Sequential Circuits,2024-02-01,2024-02-01
+DD-III: State Reduction and Assignment,2024-02-01,2024-02-02
+DSA-IV: Graph Algorithms: Definitions,2024-02-01,2024-02-01
+DSA-IV: Representation of graphs,2024-02-01,2024-02-01
+DSA-IV:  Graph Traversals: Breadth-first traversal,2024-02-01,2024-02-01
+DSA-IV: Depth-first traversal,2024-02-01,2024-02-01
+DSA-IV:  Topological sort,2024-02-01,2024-02-01
+DSA-IV: Shortest-Path Algorithms: Dijkstra’s algorithm,2024-02-01,2024-02-02
+DD-III: Design Procedure,2024-02-02,2024-02-02
+DD-III: Registers and Counters,2024-02-02,2024-02-02
+DD-III: HDL Models of Sequential Circuits. ,2024-02-02,2024-02-02
+DD-IV: Analysis and Design of Asynchronous Sequential Circuits,2024-02-02,2024-02-02
+DD-IV: Reduction of State and Flow Tables,2024-02-02,2024-02-03
+DSA-IV: All-pairs shortest path. ,2024-02-02,2024-02-02
+DSA-V: Sorting: Insertion sort,2024-02-02,2024-02-02
+DSA-V: Shell sort,2024-02-02,2024-02-02
+DSA-V: Radix Exchange sort,2024-02-02,2024-02-02
+DSA-V:  Hashing: Hash function,2024-02-02,2024-02-03
+DD-IV: Race-free State Assignment,2024-02-03,2024-02-03
+DD-IV: Hazards. ,2024-02-03,2024-02-03
+DD-V: RAM,2024-02-03,2024-02-03
+DD-V: Memory Decoding,2024-02-03,2024-02-03
+DD-V: Error Detection and Correction,2024-02-03,2024-02-04
+DSA-V: Separate chaining,2024-02-03,2024-02-03
+DSA-V: Open addressing,2024-02-03,2024-02-03
+DSA-V: Rehashing,2024-02-03,2024-02-03
+DSA-V: Extendible hashing. ,2024-02-03,2024-02-03
+DSA-III: Preliminaries,2024-02-03,2024-02-03
+DSA-III:  Binary trees: Expression trees,2024-02-03,2024-02-04
+DD-V: ROM,2024-02-04,2024-02-04
+DD-V: Programmable Logic Array,2024-02-04,2024-02-04
+DD-V: Programmable Array Logic,2024-02-04,2024-02-04
+DD-V: Sequential Programmable Devices. ,2024-02-04,2024-02-05
+DSA-III:  Binary search tree ADT,2024-02-04,2024-02-04
+DSA-III:  AVL trees,2024-02-04,2024-02-04
+DSA-III:  Tree traversals,2024-02-04,2024-02-04
+DSA-III:  B- Trees,2024-02-04,2024-02-04
+DSA-III:  Priority Queues: Binary heap.,2024-02-04,2024-02-05

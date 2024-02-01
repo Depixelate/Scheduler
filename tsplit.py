@@ -382,12 +382,12 @@ if args.name == None:
 if args.output != "" and not args.output[-1] == "/":
     args.output += "/"
 init_path = f"{args.output}{args.name}_"
-td_split = td_split.sort_values("START", axis=0, ignore_index=True)
+td_split = td_split.sort_values("START", axis=0, ignore_index=True, kind="stable")
 td_split = to_todoist(td_split, args.priority)
 td_split.to_csv(init_path + "td_split.csv", index=False)
-gantt = gantt.sort_values("START", axis=0, ignore_index=True)
+gantt = gantt.sort_values("START", axis=0, ignore_index=True, kind="stable")
 gantt.to_csv(init_path + "gantt.csv", index=False)
-td_inter = td_inter.sort_values("START", axis=0, ignore_index=True)
+td_inter = td_inter.sort_values("START", axis=0, ignore_index=True, kind="stable")
 td_inter = to_todoist(td_inter, args.priority)
 td_inter.to_csv(init_path + "td_inter_rows.csv", index=False)
 
