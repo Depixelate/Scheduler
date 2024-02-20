@@ -31,7 +31,7 @@ parser.add_argument(
     "-e",
     "--end",
     default="",
-    help="Day after the last day you want tasks to be scheduled for, in ISO format (YYYY-MM-DD) (default: today)",
+    help="Day after the last day you want tasks to be scheduled for, in ISO format (YYYY-MM-DD), required if not segmenting tasks.",
 )
 parser.add_argument(
     "-i",
