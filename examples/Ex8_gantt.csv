@@ -1,0 +1,52 @@
+NAME,START,END
+DL-W4: Gradient Descent (GD),2024-02-20,2024-02-20
+DL-W4:  Momentum Based GD,2024-02-20,2024-02-20
+DL-W4:  Nesterov Accelerated GD,2024-02-20,2024-02-20
+DL-W4:  Stochastic GD,2024-02-20,2024-02-20
+DL-W4:  AdaGrad,2024-02-20,2024-02-20
+DL-W4:  RMSProp,2024-02-20,2024-02-20
+DL-W4:  Adam,2024-02-20,2024-02-20
+DL-W4:  Eigenvalues and eigenvectors,2024-02-20,2024-02-20
+DL-W4:  Eigenvalue Decomposition,2024-02-20,2024-02-20
+DL-W4:  Basis,2024-02-20,2024-02-21
+DL-W5: Principal Component Analysis and its interpretations,2024-02-21,2024-02-24
+DL-W5:  Singular Value Decomposition,2024-02-24,2024-02-28
+DL-W6: Autoencoders and relation to PCA,2024-02-28,2024-02-29
+DL-W6:  Regularization in autoencoders,2024-02-29,2024-03-01
+DL-W6:  Denoising autoencoders,2024-03-01,2024-03-03
+DL-W6:  Sparse autoencoders,2024-03-03,2024-03-04
+DL-W6:  Contractive autoencoders,2024-03-04,2024-03-06
+DL-W7: Regularization: Bias Variance Tradeoff,2024-03-06,2024-03-06
+DL-W7:  L2 regularization,2024-03-06,2024-03-07
+DL-W7:  Early stopping,2024-03-07,2024-03-08
+DL-W7:  Dataset augmentation,2024-03-08,2024-03-09
+DL-W7:  Parameter sharing and tying,2024-03-09,2024-03-10
+DL-W7:  Injecting noise at input,2024-03-10,2024-03-11
+DL-W7:  Ensemble methods,2024-03-11,2024-03-12
+DL-W7:  Dropout,2024-03-12,2024-03-13
+DL-W8: Greedy Layerwise Pre-training,2024-03-13,2024-03-14
+DL-W8:  Better activation functions,2024-03-14,2024-03-16
+DL-W8:  Better weight initialization methods,2024-03-16,2024-03-18
+DL-W8:  Batch Normalization,2024-03-18,2024-03-20
+DL-W9: Learning Vectorial Representations Of Words,2024-03-20,2024-03-27
+DL-W10: Convolutional Neural Networks,2024-03-27,2024-03-27
+DL-W10:  LeNet,2024-03-27,2024-03-28
+DL-W10:  AlexNet,2024-03-28,2024-03-28
+DL-W10:  ZF-Net,2024-03-28,2024-03-29
+DL-W10:  VGGNet,2024-03-29,2024-03-29
+DL-W10:  GoogLeNet,2024-03-29,2024-03-30
+DL-W10:  ResNet,2024-03-30,2024-03-31
+DL-W10:  Visualizing Convolutional Neural Networks,2024-03-31,2024-03-31
+DL-W10:  Guided Backpropagation,2024-03-31,2024-04-01
+DL-W10:  Deep Dream,2024-04-01,2024-04-01
+DL-W10:  Deep Art,2024-04-01,2024-04-02
+DL-W10:  Fooling Convolutional Neural Networks,2024-04-02,2024-04-03
+DL-W11: Recurrent Neural Networks,2024-04-03,2024-04-04
+DL-W11:  Backpropagation through time (BPTT),2024-04-04,2024-04-05
+DL-W11:  Vanishing and Exploding Gradients,2024-04-05,2024-04-06
+DL-W11:  Truncated BPTT,2024-04-06,2024-04-07
+DL-W11:  GRU,2024-04-07,2024-04-08
+DL-W11:  LSTMs,2024-04-08,2024-04-10
+DL-W12: Encoder Decoder Models,2024-04-10,2024-04-12
+DL-W12:  Attention Mechanism,2024-04-12,2024-04-14
+DL-W12:  Attention over images,2024-04-14,2024-04-17

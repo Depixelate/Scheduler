@@ -305,6 +305,7 @@ def gantt_rows(args, task_list):
 
 
 def to_todoist(df: pd.DataFrame, priority: str):
+    #print(df)
     df = df.rename({"NAME": "CONTENT", "START": "DATE"}, axis=1)
     df["TYPE"] = "task"
     df["DATE_LANG"] = "en"
@@ -408,10 +409,10 @@ def main():
         segs = segs[1:]
         seg_end_pairs = [[text, end] for text, end in zip(segs[1::2], segs[::2])]
         seg_end_pairs[-1][1] = (
-            args.end if args.end.trim() != "" else seg_end_pairs[-1][1]
+            args.end if args.end.strip() != "" else seg_end_pairs[-1][1]
         )
     else:
-        seg_end_pairs = [[segs, args.end]]
+        seg_end_pairs = [[segs[0], args.end]]
 
     cur_datetime = datetime.fromisoformat(args.start)
 
@@ -421,11 +422,11 @@ def main():
 
     for i, pair in enumerate(seg_end_pairs):
         text, end = pair
-        if end.trim().isdigit():
+        if end.strip().isdigit():
             cur_datetime += timedelta(days=int(end))
             pair[1] = (cur_datetime + timedelta(days=int(end))).date().isoformat()
-        elif end.trim() == "":
-            if increment is None and args.end.trim() == "":
+        elif end.strip() == "":
+            if increment is None and args.end.strip() == "":
                 raise ValueError(
                     "You haven't providided an end date, and no end date/days for the tasks/segment of tasks, or a default number of days. Please Provide one of these"
                 )
@@ -442,13 +443,14 @@ def main():
 
     gantt, td_split, td_inter = pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
 
+    #print(seg_end_pairs)
     for text, end in seg_end_pairs:
         args.end = end
         g, s, i = get_dfs(args, text)
         args.start = args.end
-        pd.concat([gantt, g], ignore_index=True)
-        pd.concat([td_split, s], ignore_index=True)
-        pd.concat([td_inter, i], ignore_index=True)
+        gantt = pd.concat([gantt, g], ignore_index=True)
+        td_split = pd.concat([td_split, s], ignore_index=True)
+        td_inter = pd.concat([td_inter, i], ignore_index=True)
 
     if args.name is None:
         args.name = args.path
@@ -469,7 +471,6 @@ def main():
     td_split.to_csv(init_path + "td_split.csv", index=False)
 
     td_inter.to_csv(init_path + "td_inter_rows.csv", index=False)
-
     # print(seg_end_pairs)
 
 

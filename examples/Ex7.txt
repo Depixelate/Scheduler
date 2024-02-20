@@ -16,25 +16,6 @@ UNIT V STATISTICAL QUALITY CONTROL 9
 Control charts for measurements (X and R charts) – Control charts for attributes (p, c and np charts) –
 Tolerance limits – Acceptance sampling.
 
-title: IC
-UNIT I INTRODUCTION 9
-Historical background – Government of India act – Indian councils act – Making of the constitution -
-Philosophy of the Indian constitution – Preamble.
-UNIT II GOVERNEMTN OF THE UNION 9
-Powers and Functions of President and Prime Minister - Council of Ministers – President in relation to
-his council – Legislature structure and functions of Lok Sabha and Rajya Sabha – Speaker.
-UNIT III
-GOVERNMENTS OF THE STATES AND LOCAL
-GOVERNMENT 9
-The state executive: General structure – Governor – Council of ministers – State legislature. Local
-government – Panchayat – Municipality– Power authority and responsibilities municipalities.
-UNIT IV THE JUDICATURE 9
-Organization and Composition of Judiciary – Constitution – Appointment – Qualifications – Powers and
-functions of the supreme court – High courts – Control over subordinate courts.
-UNIT V THE FEDERAL SYSTEM 9
-Distribution of financial powers: Need, principles-Underlaying distribution of tax revenues – Distribution
-of legislative power – Interstate relation – Emergency provisions.
-
 title: CO&A
 UNIT I BASIC STRUCTURE OF A COMPUTER SYSTEM 9
 Functional Units – Basic Operational Concepts – Performance; Instructions: Language of the computer –

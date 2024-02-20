@@ -1,0 +1,19 @@
+s():
+title: DL-W1
+(Partial) History of Deep Learning
+ Deep Learning Success Stories McCulloch Pitts Neuron
+ Thresholding Logic
+ Perceptrons
+ Perceptron Learning Algorithm
+s():
+title: DL-W2
+Multilayer Perceptrons (MLPs)
+ Representation Power of MLPs
+ Sigmoid Neurons
+ Gradient Descent
+ Feedforward Neural Networks
+ Representation Power of Feedforward Neural Networks
+s():
+title: DL-W3
+FeedForward Neural Networks
+ Backpropagation
