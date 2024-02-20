@@ -1,3 +1,5 @@
+# Write comments using hashtags, all content after hashtags are ignored.
+
 title: Eng
 UNIT I INTRODUCTION TO VALUE EDUCATION 9
 Value Education – Need, Basic Guidelines, Content and Process, Self-Exploration – meaning, importance

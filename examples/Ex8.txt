@@ -1,3 +1,4 @@
+# Command: python tsplit.py -m m -p Examples/Ex8.txt -ss 7, on 2023-02-20
 s(2024-02-21):
 title: DL-W4
 Gradient Descent (GD)

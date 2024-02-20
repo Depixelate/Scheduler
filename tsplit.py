@@ -402,7 +402,9 @@ def main():
 
     with open(args.path, "r", encoding="utf-8") as f:
         text = f.read()
-
+    
+    #print(text)
+    text = re.sub(r'#[^\n]*\n', "", text)
     segs = re.split(r"s\(([^)]*)\):", text)
     # print(len(segs))
     if len(segs) > 1:

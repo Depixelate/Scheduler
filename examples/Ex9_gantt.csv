@@ -1,0 +1,14 @@
+NAME,START,END
+DL-W1: (Partial) History of Deep Learning,2024-02-20,2024-02-23
+DL-W1:  Deep Learning Success Stories McCulloch Pitts Neuron,2024-02-23,2024-02-27
+DL-W1:  Thresholding Logic,2024-02-27,2024-03-01
+DL-W1:  Perceptrons,2024-03-01,2024-03-05
+DL-W1:  Perceptron Learning Algorithm,2024-03-05,2024-03-09
+DL-W2: Multilayer Perceptrons (MLPs),2024-03-09,2024-03-12
+DL-W2:  Representation Power of MLPs,2024-03-12,2024-03-15
+DL-W2:  Sigmoid Neurons,2024-03-15,2024-03-18
+DL-W2:  Gradient Descent,2024-03-18,2024-03-21
+DL-W2:  Feedforward Neural Networks,2024-03-21,2024-03-24
+DL-W2:  Representation Power of Feedforward Neural Networks,2024-03-24,2024-03-27
+DL-W3: FeedForward Neural Networks,2024-03-27,2024-04-05
+DL-W3:  Backpropagation,2024-04-05,2024-04-15

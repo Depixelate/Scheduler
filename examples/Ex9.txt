@@ -1,3 +1,4 @@
+# Command: python tsplit.py -m m -p Examples/Ex9.txt -e 2024-04-15, on 20-02-2024
 s():
 title: DL-W1
 (Partial) History of Deep Learning
