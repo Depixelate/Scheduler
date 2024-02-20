@@ -4,7 +4,7 @@ Takes a list of tasks, and outputs them in a format that todoist can read.
 """
 import re
 import argparse
-from datetime import date, timedelta
+from datetime import datetime, date, timedelta
 import math
 import pathlib
 
@@ -12,7 +12,7 @@ import pandas as pd
 
 
 parser = argparse.ArgumentParser(
-    description="Takes a list of tasks to do, and generates a list of todoist tasks and gantt chart tasks in a csv file which can easily be uploaded to a gantt app or todoist.",
+    description="Takes a list of tasks to do, and generates a list of todoist tasks and gantt chart tasks in a csv file which can easily be uploaded to a gantt app or todoist.\nNote, expects topics to be separated by a special character: –"
 )
 
 parser.add_argument(
@@ -30,7 +30,7 @@ parser.add_argument(
 parser.add_argument(
     "-e",
     "--end",
-    default=date.today().isoformat(),
+    default="",
     help="Day after the last day you want tasks to be scheduled for, in ISO format (YYYY-MM-DD) (default: today)",
 )
 parser.add_argument(
@@ -87,6 +87,19 @@ parser.add_argument(
     choices=["s", "single", "m", "multi", "multiple"],
     help="whether it should treat the input as a single list, or multiple lists each separated by a blank line.",
     required=True,
+)
+# parser.add_argument(
+#     "-sgt",
+#     "--segment-time",
+#     help="Allows you to specify a time segment for some tasks",
+#     action=argparse.BooleanOptionalAction,
+#     default=True
+# )
+parser.add_argument(
+    "-ss",
+    "--set-segment",
+    help="Allows you to set duration of segment for those tasks which don't have any, default behaviour is set them so that fills remaining time equally",
+    default="-1"
 )
 
 # parser.add_argument("-md", "--max-denominator", help = "the maximum denominator when splitting tasks by day, default 12, set to 0 for no limit", default = 12)
@@ -343,54 +356,95 @@ def td_inter_rows(args, gantt: pd.DataFrame):
     td_inter_rows = pd.DataFrame(rows, columns=["NAME", "START"])
     return td_inter_rows
 
+def get_dfs(args, text):
+    parts = [text]
+    if "m" in args.mode:
+        parts = text.split("\n\n")
 
-args = parser.parse_args()
-testPath = pathlib.Path(args.path)
-if not testPath.exists():
-    parser.error("The path provided to --path does not exist! (If no path was provided, then 'tasks.txt' was assumed to be the path)")
+    task_lists = [parse_tasks(args, part) for part in parts]
 
-with open(args.path, "r", encoding = 'utf-8') as f:
-    text = f.read()
+    with open("log.txt", "a", encoding = 'utf-8') as f:
+        for task_list in task_lists:
+            f.write(str(task_list))
+            f.write("\n\n")
+        # f.write(str(task_lists))
 
-parts = [text]
-
-if "m" in args.mode:
-    parts = text.split("\n\n")
-
-task_lists = [parse_tasks(args, part) for part in parts]
-
-with open("log.txt", "w") as f:
+    td_split, td_inter, gantt = [], [], []
     for task_list in task_lists:
-        f.write(str(task_list))
-        f.write("\n\n")
-    # f.write(str(task_lists))
+        g_rows = gantt_rows(
+            args, task_list
+        )  # Gannt basically does the timing calculation, the rest just convert from gannt to the desired format.
+        td_split.extend(td_split_rows(g_rows))
+        gantt.extend(g_rows)
+    td_split = pd.DataFrame(td_split, columns=["NAME", "START"])
+    gantt = pd.DataFrame(gantt, columns=["NAME", "START", "END"])
+    #gantt = gantt.sort_values("START", axis=0, ignore_index=True, kind="stable") # Uncomment this if you want sorted before inter rows, this tends to jumble up the tasks from different subjects more, while not having it tends to group tasks from the same subject together.
+    td_inter = td_inter_rows(args, gantt)
+    if args.name is None:
+        args.name = args.path
+        if "." in args.name:
+            args.name = args.name[: args.name.index(".")]
+    if args.output != "" and not args.output[-1] == "/":
+        args.output += "/"
+    init_path = f"{args.output}{args.name}_"
+    td_split = td_split.sort_values("START", axis=0, ignore_index=True, kind="stable")
+    td_split = to_todoist(td_split, args.priority)
+    td_split.to_csv(init_path + "td_split.csv", index=False)
+    gantt = gantt.sort_values("START", axis=0, ignore_index=True, kind="stable")
+    gantt.to_csv(init_path + "gantt.csv", index=False)
+    td_inter = td_inter.sort_values("START", axis=0, ignore_index=True, kind="stable")
+    td_inter = to_todoist(td_inter, args.priority)
+    td_inter.to_csv(init_path + "td_inter_rows.csv", index=False)
+    return gantt, td_split, td_inter
 
-td_split, td_inter, gantt = [], [], []
-for task_list in task_lists:
-    g_rows = gantt_rows(
-        args, task_list
-    )  # Gannt basically does the timing calculation, the rest just convert from gannt to the desired format.
-    td_split.extend(td_split_rows(g_rows))
-    gantt.extend(g_rows)
-td_split = pd.DataFrame(td_split, columns=["NAME", "START"])
-gantt = pd.DataFrame(gantt, columns=["NAME", "START", "END"])
-#gantt = gantt.sort_values("START", axis=0, ignore_index=True, kind="stable") # Uncomment this if you want sorted before inter rows, this tends to jumble up the tasks from different subjects more, while not having it tends to group tasks from the same subject together.
-td_inter = td_inter_rows(args, gantt)
-if args.name == None:
-    args.name = args.path
-    if "." in args.name:
-        args.name = args.name[: args.name.index(".")]
-if args.output != "" and not args.output[-1] == "/":
-    args.output += "/"
-init_path = f"{args.output}{args.name}_"
-td_split = td_split.sort_values("START", axis=0, ignore_index=True, kind="stable")
-td_split = to_todoist(td_split, args.priority)
-td_split.to_csv(init_path + "td_split.csv", index=False)
-gantt = gantt.sort_values("START", axis=0, ignore_index=True, kind="stable")
-gantt.to_csv(init_path + "gantt.csv", index=False)
-td_inter = td_inter.sort_values("START", axis=0, ignore_index=True, kind="stable")
-td_inter = to_todoist(td_inter, args.priority)
-td_inter.to_csv(init_path + "td_inter_rows.csv", index=False)
+
+def main():
+    args = parser.parse_args()
+    test_path = pathlib.Path(args.path)
+    if not test_path.exists():
+        parser.error("The path provided to --path does not exist! (If no path was provided, then 'tasks.txt' was assumed to be the path)")
+
+    with open(args.path, "r", encoding = 'utf-8') as f:
+        text = f.read()
+    
+    segs = re.split(r"s\(([^)]*)\):", text)
+    #print(len(segs))
+    if len(segs) > 1:
+        segs = segs[1:]
+        seg_end_pairs = [[text, end] for text, end in zip(segs[1::2], segs[::2])]
+        seg_end_pairs[-1][1] = args.end if args.end.trim() != "" else seg_end_pairs[-1][1]
+    else:
+        seg_end_pairs = [[segs, args.end]]
+    
+    cur_datetime = datetime.fromisoformat(args.start)
+
+    increment = timedelta(days=int(args.set_segment)) if int(args.set_segment) > 0 else None
+
+    for i, pair in enumerate(seg_end_pairs):
+        text, end = pair
+        if end.trim().isdigit():
+            cur_datetime += timedelta(days=int(end))
+            pair[1] = (cur_datetime + timedelta(days=int(end))).date().isoformat()
+        elif end.trim()=="":
+            if increment is None and args.end.trim() == "": 
+                raise ValueError("You haven't providided an end date, and no end date/days for the tasks/segment of tasks, or a default number of days. Please Provide one of these")
+            increment = (datetime.fromisoformat(args.end) - cur_datetime) / (len(seg_end_pairs) - i) if increment is None else increment
+            cur_datetime += increment
+            pair[1] = cur_datetime.date().isoformat()
+        else:
+            cur_datetime = datetime.fromisoformat(end)
+
+    
+            
+
+
+            
+    
+    #print(seg_end_pairs)  
+
+main()
+
+
 
 
 # parts_lines = []
